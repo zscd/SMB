@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/smb_homeactivity_scrollview">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/smb_homeactivity_toplinebar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/smb_home_day"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/smb_home_month"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/smb_home_year"/>
+
+
+            </LinearLayout>
+            <ImageView
+                android:layout_below="@id/smb_homeactivity_toplinebar"
+                android:id="@+id/smb_homeactivity_divider1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_shelf_category_divider" />
+            <RelativeLayout
+                android:layout_below="@id/smb_homeactivity_divider1"
+                android:id="@+id/smb_homeactivity_conditions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp">
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/smb_homeactivity_barchart_conditions"
+                    android:layout_width="match_parent"
+                    android:layout_height="122dp"
+                    />
+            </RelativeLayout>
+            <ImageView
+                android:layout_below="@id/smb_homeactivity_conditions"
+                android:id="@+id/smb_homeactivity_divider2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_shelf_category_divider" />
+            <RelativeLayout
+                android:layout_below="@id/smb_homeactivity_divider2"
+                android:id="@+id/smb_homeactivity_heartrate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp">
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/smb_homeactivity_LineChart_heartrate"
+                    android:layout_width="match_parent"
+                    android:layout_height="122dp" />
+            </RelativeLayout>
+            <ImageView
+                android:layout_below="@id/smb_homeactivity_heartrate"
+                android:id="@+id/smb_homeactivity_divider3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_shelf_category_divider" />
+            <RelativeLayout
+                android:layout_below="@id/smb_homeactivity_divider3"
+                android:id="@+id/smb_homeactivity_breath"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp">
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/smb_homeactivity_LineChart_breath"
+                    android:layout_width="match_parent"
+                    android:layout_height="122dp" />
+            </RelativeLayout>
+            <ImageView
+                android:layout_below="@id/smb_homeactivity_breath"
+                android:id="@+id/smb_homeactivity_divider4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_shelf_category_divider" />
+
+            <LinearLayout
+                android:layout_below="@id/smb_homeactivity_divider4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/smb_homeactivity_grade"
+                android:orientation="vertical"
+                android:minHeight="60dp">
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_below="@id/smb_homeactivity_grade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/smb_homeactivity_danger"
+                android:orientation="vertical"
+                android:minHeight="60dp">
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_below="@id/smb_homeactivity_danger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/smb_homeactivity_suggest"
+                android:orientation="vertical"
+                android:minHeight="60dp">
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <ImageView
+        android:layout_below="@id/smb_homeactivity_scrollview"
+        android:id="@+id/smb_homeactivity_divider5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_shelf_category_divider" />
+
+
+
+</RelativeLayout>
