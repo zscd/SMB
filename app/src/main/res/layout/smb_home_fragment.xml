@@ -16,24 +16,25 @@
                 android:id="@+id/smb_homeactivity_toplinebar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                >
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
                     android:text="@string/smb_home_day"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
                     android:text="@string/smb_home_month"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
                     android:text="@string/smb_home_year"/>
 
 
