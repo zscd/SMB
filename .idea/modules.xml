@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SMB.iml" filepath="$PROJECT_DIR$/SMB.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/SMB.iml" filepath="$PROJECT_DIR$/.idea/SMB.iml" />
+      <module fileurl="file://C:\Users\vicsun\StudioProjects\SMB\SMB.iml" filepath="C:\Users\vicsun\StudioProjects\SMB\SMB.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\vicsun\StudioProjects\SMB\app\app.iml" filepath="C:\Users\vicsun\StudioProjects\SMB\app\app.iml" />
     </modules>
   </component>
 </project>
