@@ -77,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
             remember_password_login.setChecked(true);
             if(isRemember2){
                 auto_login.setChecked(true);
-                Intent intent = new Intent(LoginActivity.this,MainActivity.class);
+                Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
                 startActivity(intent);
             }
         }
