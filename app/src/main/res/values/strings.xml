@@ -13,5 +13,8 @@
     <string name="smb_home_day">日</string>
     <string name="smb_home_month">月</string>
     <string name="smb_home_year">年</string>
+    <string name="last_score">本次睡眠得分</string>
+    <string name="history_record">历史记录</string>
+    <string name="history_day">3月21日</string>
 </resources>
 

@@ -19,7 +19,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".DetailsActivity" />
+        <activity android:name=".BottomTabLayoutActivity"/>
+        <activity android:name=".TabActivity"/>
     </application>
 
 </manifest>

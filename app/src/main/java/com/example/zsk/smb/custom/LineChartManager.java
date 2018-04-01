@@ -1,5 +1,6 @@
 package com.example.zsk.smb.custom;
 
+import com.example.zsk.smb.R;
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.Description;
@@ -38,7 +39,11 @@ public class LineChartManager {
     private void initLineChart() {
         lineChart.setDrawGridBackground(false);
         //显示边界
-        lineChart.setDrawBorders(true);
+        lineChart.setDrawBorders(false);
+        //启用X轴缩放
+        lineChart.setScaleXEnabled(true);
+        //启用平移图表
+        lineChart.setDragEnabled(true);
 
         //设置动画效果
         lineChart.animateY(1000, Easing.EasingOption.Linear);
@@ -47,7 +52,7 @@ public class LineChartManager {
         //折线图例 标签 设置
         Legend legend = lineChart.getLegend();
         legend.setForm(Legend.LegendForm.LINE);
-        legend.setTextSize(11f);
+        legend.setTextSize(10f);
         //显示位置
         legend.setVerticalAlignment(Legend.LegendVerticalAlignment.BOTTOM);
         legend.setHorizontalAlignment(Legend.LegendHorizontalAlignment.LEFT);
@@ -59,9 +64,14 @@ public class LineChartManager {
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
         xAxis.setAxisMinimum(0f);
         xAxis.setGranularity(1f);
+        xAxis.setDrawGridLines(false);
         //保证Y轴从0开始，不然会上移一点
         leftAxis.setAxisMinimum(0f);
         rightAxis.setAxisMinimum(0f);
+        rightAxis.setDrawLabels(false);
+        leftAxis.setTextSize(10f);
+        rightAxis.setTextSize(10f);
+
     }
 
     /**
@@ -85,6 +95,7 @@ public class LineChartManager {
         lineDataSet.setFormSize(15.f);
         //线模式为圆滑曲线（默认折线）
         lineDataSet.setMode(LineDataSet.Mode.CUBIC_BEZIER);
+        lineDataSet.setDrawValues(false);
     }
 
     /**
@@ -161,6 +172,7 @@ public class LineChartManager {
         rightAxis.setAxisMinimum(min);
         rightAxis.setLabelCount(labelCount, false);
         lineChart.invalidate();
+
     }
 
     /**

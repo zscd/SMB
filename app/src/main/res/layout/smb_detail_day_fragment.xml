@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/smb_homeactivity_scrollview"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/sleep_score_png"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/circle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="54dp"
+                    android:text="72"
+                    android:textSize="35dp" />
+
+
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/sleep_png"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/last_score"
+                android:textSize="20dp"
+                android:layout_below="@+id/sleep_score_png"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:id="@+id/smb_homeactivity_divider1"
+                android:layout_below="@+id/sleep_png"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_shelf_category_divider"/>
+            <RelativeLayout
+                android:id="@+id/smb_homeactivity_conditions"
+                android:layout_below="@+id/smb_homeactivity_divider1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp">
+                <!--<com.github.mikephil.charting.charts.BarChart-->
+                    <!--android:id="@+id/smb_homeactivity_barchart_conditions"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="122dp"-->
+                    <!--/>-->
+                <com.example.zsk.smb.ByStagesView
+                    android:id="@+id/test_bs"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp">
+
+                </com.example.zsk.smb.ByStagesView>
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/smb_homeactivity_barchart_conditions"-->
+                    <!--/>-->
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/test_bs"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:layout_weight="1.0"
+                        android:textSize="20dp"
+                        android:text="21:30"/>
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="1.0"
+                        android:textSize="20dp"
+                        android:text="07:30" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linearlayout_1"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:layout_weight="1.0"
+                        android:textSize="20dp"
+                        android:text="入睡时间" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="1.0"
+                        android:textSize="20dp"
+                        android:text="醒来时间" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/linearlayout_2"
+                    android:layout_marginTop="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="3时0分"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:layout_weight="1.0" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_weight="1.0"
+                        android:textSize="20dp"
+                        android:text="4时30分" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/linearlayout_3"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:layout_weight="1.0"
+                        android:textSize="20dp"
+                        android:text="深睡时长"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:gravity="center"
+                        android:layout_weight="1.0"
+                        android:textSize="20dp"
+                        android:text="浅睡时长"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+            <ImageView
+                android:layout_below="@id/smb_homeactivity_conditions"
+                android:id="@+id/smb_homeactivity_divider2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_shelf_category_divider" />
+            <RelativeLayout
+                android:layout_below="@id/smb_homeactivity_divider2"
+                android:id="@+id/smb_homeactivity_heartrate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp">
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/smb_homeactivity_LineChart_heartrate"
+                    android:layout_width="match_parent"
+                    android:layout_height="122dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/smb_homeactivity_LineChart_heartrate"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:text="平均心率"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:text="78次/分"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+            <ImageView
+                android:layout_below="@id/smb_homeactivity_heartrate"
+                android:id="@+id/smb_homeactivity_divider3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_shelf_category_divider" />
+            <RelativeLayout
+                android:layout_below="@id/smb_homeactivity_divider3"
+                android:id="@+id/smb_homeactivity_breath"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp">
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/smb_homeactivity_LineChart_breath"
+                    android:layout_width="match_parent"
+                    android:layout_height="122dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/smb_homeactivity_LineChart_breath"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:text="平均呼吸"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:text="20次/分"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+            <ImageView
+                android:layout_below="@id/smb_homeactivity_breath"
+                android:id="@+id/smb_homeactivity_divider4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_shelf_category_divider" />
+
+            <LinearLayout
+                android:layout_below="@+id/smb_homeactivity_divider4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/smb_homeactivity_danger"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:minHeight="60dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2.0">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:text="2次"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:text="1次"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2.0">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:text="呼吸暂停"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:textSize="20dp"
+                        android:text="心率异常"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_below="@id/smb_homeactivity_danger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/smb_homeactivity_suggest"
+                android:orientation="vertical"
+                android:layout_marginTop="40dp"
+                android:minHeight="60dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:text="睡眠建议"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+    <ImageView
+        android:layout_below="@id/smb_homeactivity_scrollview"
+        android:id="@+id/smb_homeactivity_divider5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_shelf_category_divider" />
+
+
+
+</RelativeLayout>

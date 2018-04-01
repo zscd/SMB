@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Service_AllFunctions_LinearLayout"
+    android:background="#ffffff">
+
+
+    <LinearLayout
+        android:id="@+id/Activity_AllFunctions_LinearLayout_Main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Activity_AllFunctions_LinearLayout_Function"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Activity_AllFunctions_LinearLayout_FirstRowFunction"
+                android:layout_marginTop="30dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:id="@+id/Activity_AllFunctions_LinearLayout_Function1"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/Activity_AllFunctions_ImageView_Function1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/clock" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="智能闹钟"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/Activity_AllFunctions_TextView_Function1"
+                        android:textColor="@color/black"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/Activity_AllFunctions_LinearLayout_Function2"
+                    android:orientation="vertical">
+
+                    <Switch
+                        android:id="@+id/Activity_AllFunctions_ImageView_Function2"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:track="@drawable/track"
+                        android:textOff="   "
+                        android:textOn="   "
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/Activity_AllFunctions_TextView_Function2"
+                        android:textColor="@color/black"
+                        android:text="报警开关" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/Activity_AllFunctions_LinearLayout_Function3"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/Activity_AllFunctions_ImageView_Function3"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/doctor" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:id="@+id/Activity_AllFunctions_TextView_Function3"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="5dp"
+                        android:text="在线医生" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Activity_AllFunctions_LinearLayout_SecondRowFunction"
+                android:layout_marginTop="30dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Activity_AllFunctions_LinearLayout_Function4"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/Activity_AllFunctions_ImageView_Function4"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/link" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/Activity_AllFunctions_TextView_Function4"
+                        android:text="官网链接" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/Activity_AllFunctions_LinearLayout_Function5"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/Activity_AllFunctions_ImageView_Function5"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/help" />
+
+                    <TextView
+                        android:id="@+id/Activity_AllFunctions_TextView_Function5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="5dp"
+                        android:text="帮助" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Activity_AllFunctions_LinearLayout_Function6"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/Activity_AllFunctions_ImageView_Function6"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/aftersales_service" />
+
+                    <TextView
+                        android:id="@+id/Activity_AllFunctions_TextView_Function6"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center"
+                        android:text="售后服务" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

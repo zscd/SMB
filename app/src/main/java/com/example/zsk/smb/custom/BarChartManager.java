@@ -35,9 +35,9 @@ public class BarChartManager {
     }
 
     /**
-     * 初始化LineChart
+     * 初始化BarChart
      */
-    private void initLineChart() {
+    private void initBarChart() {
         //背景颜色
         mBarChart.setBackgroundColor(Color.WHITE);
         //网格
@@ -80,7 +80,7 @@ public class BarChartManager {
      * @param color
      */
     public void showBarChart(List<Float> xAxisValues, List<Float> yAxisValues, String label, int color) {
-        initLineChart();
+        initBarChart();
         ArrayList<BarEntry> entries = new ArrayList<>();
         for (int i = 0; i < xAxisValues.size(); i++) {
             entries.add(new BarEntry(xAxisValues.get(i), yAxisValues.get(i)));
@@ -110,7 +110,7 @@ public class BarChartManager {
      * @param colours
      */
     public void showBarChart(List<Float> xAxisValues, List<List<Float>> yAxisValues, List<String> labels, List<Integer> colours) {
-        initLineChart();
+        initBarChart();
         BarData data = new BarData();
         for (int i = 0; i < yAxisValues.size(); i++) {
             ArrayList<BarEntry> entries = new ArrayList<>();

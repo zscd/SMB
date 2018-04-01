@@ -77,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
             remember_password_login.setChecked(true);
             if(isRemember2){
                 auto_login.setChecked(true);
-                Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
+                Intent intent = new Intent(LoginActivity.this,BottomTabLayoutActivity.class);
                 startActivity(intent);
             }
         }
@@ -110,7 +110,7 @@ public class LoginActivity extends AppCompatActivity {
                                     editor.clear();
                                 }
                                 editor.apply();
-                                Intent intent = new Intent(LoginActivity.this,HomeActivity.class);
+                                Intent intent = new Intent(LoginActivity.this,BottomTabLayoutActivity.class);
                                 startActivity(intent);
                                 finish();
 

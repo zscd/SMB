@@ -16,7 +16,7 @@ public class SmbHomeFragment extends Fragment {
     private View view;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState){
-        view = inflater.inflate(R.layout.smb_home_fragment,container,false);
+        view = inflater.inflate(R.layout.smb_detail_fragment,container,false);
         return view;
     }
 
