@@ -13,5 +13,8 @@
     <string name="smb_home_day">日</string>
     <string name="smb_home_month">月</string>
     <string name="smb_home_year">年</string>
+    <string name="bystages_start">开始时间</string>
+    <string name="bystages_end">结束时间</string>
+    <string name="title_activity_test_bs">testBSActivity</string>
 </resources>
 
