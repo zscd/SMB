@@ -2,6 +2,7 @@ package com.example.zsk.smb;
 
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 import android.widget.Toast;
 
 //import com.example.zsk.smb.MainActivity;
@@ -115,6 +116,7 @@ public class LoginActivity extends AppCompatActivity {
                                 finish();
 
                             }else {
+                                Log.d("LOGIN", obj.getString("Message"));
                                 Message message = new Message();
                                 message.what = UPDATE_TEXT;
                                 handler.sendMessage(message);

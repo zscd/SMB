@@ -22,11 +22,11 @@ public class BottomTabLayoutActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-<<<<<<< HEAD
-        getSupportActionBar().hide();
-=======
+
         //getSupportActionBar().hide();
->>>>>>> origin/master
+
+        //getSupportActionBar().hide();
+
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.bottom_tab_layout_ac);
         mFragmensts = DataGenerator.getFragments("TabLayout Tab");
