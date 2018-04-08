@@ -12,20 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".LoginActivity">
-
-        </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity
-            android:name=".testBSActivity"
-            android:label="@string/title_activity_test_bs"
-            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".DetailsActivity" />
+        <activity android:name=".BottomTabLayoutActivity"/>
+        <activity android:name=".TabActivity"/>
     </application>
 
 </manifest>

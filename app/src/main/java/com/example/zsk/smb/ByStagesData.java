@@ -1,8 +1,5 @@
 package com.example.zsk.smb;
 
-/**
- * Created by vicsun on 2018/3/30.
- */
 
 public class ByStagesData {
     private String start;
@@ -38,6 +35,7 @@ public class ByStagesData {
     public String getEnd(){
         return end;
     }
+
 
 
 }

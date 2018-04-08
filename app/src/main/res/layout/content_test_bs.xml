@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.zsk.smb.testBSActivity"
-    tools:showIn="@layout/activity_test_bs">
+    tools:context="com.example.zsk.smb.fragments.DayDetailsFragment"
+    tools:showIn="@layout/smb_detail_day_fragment">
 
 </android.support.constraint.ConstraintLayout>

@@ -7,6 +7,11 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.zsk.smb.fragments.HomeFragment;
+import com.example.zsk.smb.fragments.ProfileFragment;
+import com.example.zsk.smb.fragments.ServiceFragment;
+import com.example.zsk.smb.fragments.StatisticsFragment;
+
 /**
  * Created by vicsun on 2018/3/5.
  */
@@ -19,9 +24,9 @@ public class DataGenerator {
 
     public static Fragment[] getFragments(String from){
         Fragment fragments[] = new Fragment[4];
-        fragments[0] = ProfileFragment.newInstance(from);
-        fragments[1] = ProfileFragment.newInstance(from);
-        fragments[2] = ProfileFragment.newInstance(from);
+        fragments[0] = HomeFragment.newInstance(from);
+        fragments[1] = ServiceFragment.newInstance(from);
+        fragments[2] = StatisticsFragment.newInstance(from);
         fragments[3] = ProfileFragment.newInstance(from);
         return fragments;
     }
@@ -35,7 +40,7 @@ public class DataGenerator {
     public static View getTabView(Context context, int position){
         View view = LayoutInflater.from(context).inflate(R.layout.home_tab_content,null);
         ImageView tabIcon = (ImageView) view.findViewById(R.id.tab_content_image);
-        tabIcon.setImageResource(DataGenerator.mTabRes[position]);
+        tabIcon.setImageResource(DataGenerator.mTabRes[position]);               //将点击的图标改为被点击后的图标
         TextView tabText = (TextView) view.findViewById(R.id.tab_content_text);
         tabText.setText(mTabTitle[position]);
         return view;

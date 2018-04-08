@@ -9,9 +9,6 @@ import android.widget.TextView;
 
 import java.util.jar.Attributes;
 
-/**
- * Created by vicsun on 2018/3/30.
- */
 
 public class ByStagesView extends LinearLayout {
     private LinearLayout ll_1;
