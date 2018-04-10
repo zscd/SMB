@@ -68,7 +68,7 @@ public class DetailsActivity extends AppCompatActivity{
         lineChartManager1.setYAxis(100, 0, 11);
         // lineChartManager1.setHightLimitLine(90,"高心率报警",Color.RED);
         //lineChartManager1.setLowLimitLine(50,"低心率报警");
-        lineChartManager2.showLineChart(xValues, yValues.get(1), names.get(2), colours.get(2));
+        lineChartManager2.showLineChart(xValues, yValues.get(1), names.get(2), colours.get(3));
         lineChartManager2.setYAxis(100, 0, 11);
         lineChartManager2.setDescription("呼吸");
         //lineChartManager2.setHightLimitLine(50,"高呼吸次数",Color.RED);

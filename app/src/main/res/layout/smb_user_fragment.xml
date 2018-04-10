@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="#FFFFF0">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/avatar"
+            android:src="@drawable/user"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="40dp" />
@@ -25,10 +25,24 @@
             android:text="用户名"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="23dp"
             android:textColor="#000"
             android:gravity="center"
             android:layout_marginTop="10dp"/>
+
+        <!--<ImageView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/user_name"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:src="@drawable/ic_shelf_category_divider"/>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/user_name"
+            android:layout_marginTop="5dp"
+            android:background="#999"/>
     </RelativeLayout>
 
     <LinearLayout
@@ -36,19 +50,26 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <LinearLayout
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginTop="70dp"
+            android:background="#999"/>
+        <RelativeLayout
             android:id="@+id/user_function_1"
             android:layout_width="match_parent"
-            android:layout_height="46dp"
-            android:layout_marginTop="70dp"
+            android:layout_height="70dp"
+            android:background="#FFF"
             android:weightSum="1">
 
             <ImageView
+                android:id="@+id/family1"
                 android:layout_width="50dp"
                 android:layout_height="36dp"
                 android:layout_weight="0.06"
                 android:layout_marginLeft="10dp"
-                android:src="@drawable/family" />
+                android:layout_centerVertical="true"
+                android:src="@drawable/family_1" />
 
             <TextView
                 android:id="@+id/textView9"
@@ -56,95 +77,138 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.67"
                 android:text=" 我的家人"
+                android:gravity="center_vertical|left"
                 android:textColor="@color/black"
-                android:textSize="28dp" />
+                android:textSize="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/family1"
+                android:layout_toEndOf="@+id/family1" />
 
             <ImageView
                 android:id="@+id/imageView9"
-                android:layout_width="19dp"
-                android:layout_height="28dp"
-                android:layout_marginRight="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/textView9"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
                 android:src="@drawable/right_arrow" />
 
 
 
-        </LinearLayout>
+        </RelativeLayout>
 
-        <LinearLayout
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:background="#999"/>
+
+        <RelativeLayout
             android:id="@+id/user_function_2"
             android:layout_width="match_parent"
-            android:layout_height="46dp"
-            android:layout_marginTop="25dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="0dp"
             android:orientation="horizontal"
+            android:background="#FFF"
             android:weightSum="1">
 
             <ImageView
+                android:id="@+id/my_divice"
                 android:layout_width="50dp"
-                android:layout_height="match_parent"
+                android:layout_height="36dp"
                 android:layout_weight="0.06"
                 android:layout_marginLeft="10dp"
-                android:src="@drawable/my_device" />
+                android:layout_centerVertical="true"
+                android:src="@drawable/device_1" />
 
             <TextView
+                android:id="@+id/textView4"
                 android:layout_width="300dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.67"
+                android:gravity="center_vertical|left"
+                android:layout_toRightOf="@+id/my_divice"
                 android:text=" 更换设备"
                 android:textColor="@color/black"
-                android:textSize="28dp" />
+                android:textSize="20dp" />
 
             <ImageView
-                android:layout_width="19dp"
-                android:layout_height="28dp"
-                android:layout_marginRight="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/textView4"
+                android:layout_marginRight="8dp"
                 android:src="@drawable/right_arrow" />
 
-        </LinearLayout>
+        </RelativeLayout>
 
-        <LinearLayout
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dip"
+            android:background="#999"/>
+        <RelativeLayout
             android:id="@+id/user_function_3"
             android:layout_width="match_parent"
-            android:layout_height="46dp"
-            android:layout_marginTop="25dp"
-            android:weightSum="1"
-            android:orientation="horizontal">
+            android:layout_height="70dp"
+            android:layout_marginTop="0dp"
+            android:orientation="horizontal"
+            android:background="#FFF"
+            android:weightSum="1">
 
             <ImageView
                 android:id="@+id/imageView10"
                 android:layout_width="50dp"
                 android:layout_height="33dp"
-                android:layout_weight="0.06"
                 android:layout_marginLeft="10dp"
-                android:src="@drawable/help" />
+                android:layout_weight="0.06"
+                android:layout_centerVertical="true"
+                android:src="@drawable/question" />
 
             <TextView
+                android:id="@+id/textView11"
                 android:layout_width="300dp"
                 android:layout_height="match_parent"
-                android:text=" 常见问题"
                 android:layout_weight="0.67"
+                android:text=" 常见问题"
+                android:layout_toRightOf="@+id/imageView10"
+                android:gravity="center_vertical|left"
                 android:textColor="@color/black"
-                android:textSize="28dp" />
+                android:textSize="20dp" />
 
             <ImageView
-                android:layout_width="19dp"
-                android:layout_height="28dp"
-                android:src="@drawable/right_arrow"
-                android:layout_marginRight="4dp"/>
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@+id/textView11"
+                android:layout_centerVertical="true"
+                android:src="@drawable/right_arrow" />
 
-        </LinearLayout>
+        </RelativeLayout>
 
-        <LinearLayout
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#999"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_marginTop="25dp"
+            android:background="#999"/>
+        <RelativeLayout
             android:id="@+id/user_function_4"
             android:layout_width="match_parent"
-            android:layout_height="46dp"
+            android:layout_height="70dp"
+            android:background="#FFF"
             android:weightSum="1"
-            android:layout_marginTop="25dp">
+            android:layout_marginTop="0dp">
 
             <ImageView
+                android:id="@+id/logout"
                 android:layout_width="50dp"
                 android:layout_height="33dp"
-                android:src="@drawable/logout"
+                android:src="@drawable/logout_1"
                 android:layout_weight="0.06"
+                android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"/>
 
             <TextView
@@ -152,18 +216,26 @@
                 android:layout_width="300dp"
                 android:layout_height="match_parent"
                 android:text=" 退出登录"
+                android:layout_toRightOf="@id/logout"
+                android:gravity="center_vertical|left"
                 android:textColor="@color/black"
                 android:layout_weight="0.67"
-                android:textSize="28dp" />
+                android:textSize="20dp" />
 
             <ImageView
-                android:layout_width="19dp"
-                android:layout_height="28dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
                 android:src="@drawable/right_arrow"
-                android:layout_marginEnd="4dp"
-                android:layout_marginRight="4dp"/>
+                android:layout_marginRight="8dp"
+                android:layout_toRightOf="@+id/textView8"
 
-        </LinearLayout>
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="#999"/>
 
 
     </LinearLayout>

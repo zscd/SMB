@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
     <TextView
@@ -12,6 +13,7 @@
         android:paddingLeft="20dp"
         android:paddingBottom="10dp"
         android:paddingTop="10dp"
+        android:textColor="#000"
         android:text="历史记录"
         android:textSize="25sp" />
 
@@ -22,8 +24,16 @@
         android:layout_marginTop="5dp"
         android:background="#90909090" />
 
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
     <ListView
         android:id="@+id/testListView"
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
 </LinearLayout>

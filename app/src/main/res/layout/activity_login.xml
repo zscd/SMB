@@ -15,23 +15,23 @@
     <TextView
         android:id="@+id/Login_TextView_Title"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="38dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="@color/color_TitleBar"
         android:gravity="center_horizontal"
-        android:paddingBottom="7sp"
-        android:paddingTop="8sp"
+        android:paddingBottom="7dp"
+        android:paddingTop="8dp"
         android:text="@string/Login_Title"
         android:textColor="#ffffff"
-        android:textSize="17sp"
+        android:textSize="17dp"
         android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/login_avatar"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:src="@drawable/avatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/user"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="48dp"/>
 
@@ -49,7 +49,7 @@
         android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:paddingLeft="8dp"
         android:background="@color/colorLoginEditText"
         android:inputType="textPassword"
@@ -58,7 +58,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="30dp">
 
         <CheckBox
             android:id="@+id/login_remember_password"
@@ -80,6 +80,7 @@
         android:layout_gravity="center_horizontal"
         android:background="@drawable/shape"
         android:text="@string/text_login_button"
+        android:layout_marginTop="30dp"
         android:textColor="@color/colorLoginText"
         android:textSize="20dp" />
 
@@ -89,7 +90,7 @@
         android:layout_height="wrap_content"
         android:text="快速注册"
         android:background="@android:color/transparent"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:textSize="18dp"
         android:layout_gravity="center"
         android:textColor="#6495ed"/>

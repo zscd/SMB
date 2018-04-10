@@ -4,6 +4,7 @@
     android:background="@android:color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#FFFFF0"
     >
     <!--<TextView-->
         <!--android:id="@+id/smb_homefragment_score"-->
@@ -18,17 +19,18 @@
         android:id="@+id/smb_homefragment_score"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp">
+        android:layout_marginTop="35dp">
         <ImageView
-            android:src="@drawable/circle"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:src="@drawable/circle1"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
         <TextView
             android:text="72"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="#FFF"
             android:textSize="35dp"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
@@ -58,6 +60,7 @@
             android:layout_height="40dp"
             android:gravity="center"
             android:layout_weight="1.0"
+            android:textSize="20dp"
             android:text="00:00"/>
 
         <TextView
@@ -66,6 +69,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:layout_weight="1.0"
+            android:textSize="20dp"
             android:text="08:00" />
 
     </LinearLayout>
@@ -84,12 +88,14 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:layout_weight="1.0"
+            android:textSize="20dp"
             android:text="入睡时间" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:layout_weight="1.0"
+            android:textSize="20dp"
             android:text="醒来时间" />
 
     </LinearLayout>
@@ -110,6 +116,7 @@
         android:layout_height="40dp"
         android:text="0时0分"
         android:gravity="center"
+        android:textSize="20dp"
         android:layout_weight="1.0" />
 
         <TextView
@@ -118,6 +125,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:layout_weight="1.0"
+            android:textSize="20dp"
             android:text="0时0分" />
 
     </LinearLayout>
@@ -137,12 +145,14 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:layout_weight="1.0"
+            android:textSize="20dp"
             android:text="深睡时长"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center"
             android:layout_weight="1.0"
+            android:textSize="20dp"
             android:text="浅睡时长"/>
 
     </LinearLayout>

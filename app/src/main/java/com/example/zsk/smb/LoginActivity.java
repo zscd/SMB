@@ -1,7 +1,10 @@
 package com.example.zsk.smb;
 
+import android.animation.ValueAnimator;
 import android.os.Handler;
 import android.os.Message;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 //import com.example.zsk.smb.MainActivity;
@@ -46,6 +49,7 @@ public class LoginActivity extends AppCompatActivity {
         public void handleMessage(Message msg){
             switch (msg.what){
                 case UPDATE_TEXT:
+                    dimBackground(0.5f,1.0f);
                     Toast.makeText(LoginActivity.this,"手机号或密码输入错误！",
                             Toast.LENGTH_SHORT).show();
                     break;
@@ -68,6 +72,8 @@ public class LoginActivity extends AppCompatActivity {
         button_register = (Button)findViewById(R.id.activity_login_button_zhuce);
         boolean isRemember1 = pref.getBoolean("remember_password",false);
         boolean isRemember2 = pref.getBoolean("auto_login",false);
+        String exitFlag = getIntent().getStringExtra("flag");
+
         if(isRemember1){
             //将账号和密码设置到文本框中
             String account = pref.getString("account","");
@@ -76,9 +82,12 @@ public class LoginActivity extends AppCompatActivity {
             password_login.setText(password);
             remember_password_login.setChecked(true);
             if(isRemember2){
-                auto_login.setChecked(true);
-                Intent intent = new Intent(LoginActivity.this,BottomTabLayoutActivity.class);
-                startActivity(intent);
+                if(exitFlag == null) {
+                    auto_login.setChecked(true);
+                    Intent intent = new Intent(LoginActivity.this,BottomTabLayoutActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         }
 
@@ -89,6 +98,8 @@ public class LoginActivity extends AppCompatActivity {
                 final String password = password_login.getText().toString();
                 String url ="http://api.deepsleeping.tech/api/Login";
                 String json = "{\"Phone\":\""+account+"\",\"Password\":\""+password+"\"}";
+                Toast.makeText(LoginActivity.this,"正在登录…",Toast.LENGTH_SHORT).show();
+                dimBackground(1.0f,0.5f);
                 HttpUtil.SendOkHttpRequest(url,json,new okhttp3.Callback(){
                     @Override
                     public void onResponse(Call call, Response response)throws IOException{
@@ -103,6 +114,7 @@ public class LoginActivity extends AppCompatActivity {
                                     editor.putBoolean("remember_password",true);
                                     editor.putString("account",account);
                                     editor.putString("password",password);
+                                    editor.putString("token",obj.getString("Token"));
                                     if(auto_login.isChecked()){
                                         editor.putBoolean("auto_login",true);
                                     }
@@ -136,12 +148,29 @@ public class LoginActivity extends AppCompatActivity {
         button_register.setOnClickListener(new View.OnClickListener(){
           @Override
            public void onClick(View v){
+
               Intent intent = new Intent(LoginActivity.this,MainActivity.class);
               startActivity(intent);
 
            }
         });
 
+    }
+
+    private void dimBackground(final float from, final float to) {
+        final Window window = getWindow();
+        ValueAnimator valueAnimator = ValueAnimator.ofFloat(from, to);
+        valueAnimator.setDuration(500);
+        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                WindowManager.LayoutParams params = window.getAttributes();
+                params.alpha = (Float) animation.getAnimatedValue();
+                window.setAttributes(params);
+            }
+        });
+
+        valueAnimator.start();
     }
 
 }

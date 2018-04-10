@@ -37,7 +37,7 @@
     <EditText
         android:id="@+id/Rigister_EditText_Phonenum"
         android:layout_width="320dp"
-        android:layout_height="48dp"
+        android:layout_height="50dp"
         android:layout_below="@+id/Rigister_TextView_Welcome"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="48dp"
@@ -60,7 +60,7 @@
         android:hint="输入密码"
         android:inputType="textPassword"
         android:padding="10dp"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="20dp"/>
 
     <EditText
         android:id="@+id/Rigister_EditText_ConfirmPassword"
@@ -73,14 +73,14 @@
         android:hint="确认密码"
         android:inputType="textPassword"
         android:padding="10dp"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="20dp"/>
 
     <Button
         android:id="@+id/Rigister_Button_Rigister"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_below="@+id/Rigister_EditText_ConfirmPassword"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/shape"
         android:textColor="@color/white"
@@ -92,7 +92,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="30dp"
         android:gravity="center_horizontal"
         android:paddingBottom="10sp"
         android:paddingTop="10sp"
