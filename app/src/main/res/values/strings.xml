@@ -6,8 +6,8 @@
     <string name="auto_login">自动登录</string>
     <string name="text_login_button">登录</string>
     <string name="Rigister_Title">注册</string>
-    <string name="Login_Title">欢迎使用睡眠宝</string>
-    <string name="Rigister_Welcome">欢迎注册智慧睡眠宝</string>
+    <string name="Login_Title">智慧睡眠宝</string>
+    <string name="Rigister_Welcome">注册智慧睡眠宝</string>
     <string name="Rigister_Rigister">注册</string>
     <string name="Rigister_Return">返回登录</string>
     <string name="smb_home_day">日</string>

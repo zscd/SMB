@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/Service_AllFunctions_LinearLayout"
-    android:background="#ffffff">
+    android:background="@color/ivory">
 
 
     <LinearLayout
@@ -167,7 +167,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_gravity="center"
-                        android:background="@drawable/aftersales_service" />
+                        android:background="@drawable/aftersale_server" />
 
                     <TextView
                         android:id="@+id/Activity_AllFunctions_TextView_Function6"

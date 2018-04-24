@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/ivory"
     android:orientation="vertical">
 
     <TextView
@@ -14,6 +15,7 @@
         android:paddingBottom="10dp"
         android:paddingTop="10dp"
         android:textColor="#000"
+        android:background="@color/ivory"
         android:text="历史记录"
         android:textSize="25sp" />
 
@@ -31,7 +33,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
     <ListView
         android:id="@+id/testListView"
-        android:background="@color/white"
+        android:background="@color/ivory"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

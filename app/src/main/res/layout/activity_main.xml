@@ -2,89 +2,103 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/color_TitleBar">
 
-    <TextView
-        android:id="@+id/Rigister_TextView_Title"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_weight="0.07"
-        android:background="@color/color_TitleBar"
-        android:gravity="center_horizontal"
-        android:paddingBottom="7sp"
-        android:paddingTop="8sp"
-        android:text="@string/Rigister_Title"
-        android:textColor="#ffffff"
-        android:textSize="17sp"
-        android:textStyle="bold" />
+    <!--<TextView-->
+        <!--android:id="@+id/Rigister_TextView_Title"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="35dp"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_weight="0.07"-->
+        <!--android:background="@color/color_TitleBar"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:paddingBottom="7sp"-->
+        <!--android:paddingTop="8sp"-->
+        <!--android:text="@string/Rigister_Title"-->
+        <!--android:textColor="#ffffff"-->
+        <!--android:textSize="17sp"-->
+        <!--android:textStyle="bold" />-->
 
     <TextView
         android:id="@+id/Rigister_TextView_Welcome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/Rigister_TextView_Title"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="50dp"
         android:gravity="center_horizontal"
         android:paddingBottom="20sp"
         android:paddingTop="20sp"
         android:text="@string/Rigister_Welcome"
-        android:textColor="#000000"
-        android:textSize="20sp" />
+        android:textColor="#FFF"
+        android:textSize="30sp" />
 
     <EditText
         android:id="@+id/Rigister_EditText_Phonenum"
         android:layout_width="320dp"
         android:layout_height="50dp"
-        android:layout_below="@+id/Rigister_TextView_Welcome"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="48dp"
-        android:background="@color/colorLoginEditText"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/round_edittext"
         android:hint="输入手机号码"
+        android:backgroundTint="@color/white"
         android:ems="12"
         android:padding="10dp"
-        android:inputType="textPhonetic" />
+        android:inputType="textPhonetic"
+        android:layout_below="@+id/Rigister_TextView_Welcome"
+        android:layout_alignLeft="@+id/Rigister_EditText_EnterPassword"
+        android:layout_alignStart="@+id/Rigister_EditText_EnterPassword" />
 
 
-
+    <TextView
+        android:id="@+id/Rigister_divider1"
+        android:layout_below="@+id/Rigister_EditText_Phonenum"
+        android:layout_width="320dp"
+        android:layout_height="0.5dip"
+        android:background="#999"/>
     <EditText
         android:id="@+id/Rigister_EditText_EnterPassword"
         android:layout_width="320dp"
         android:layout_height="48dp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/Rigister_EditText_Phonenum"
-        android:background="@color/colorLoginEditText"
+        android:layout_below="@+id/Rigister_divider1"
+        android:background="@color/white"
         android:ems="12"
         android:hint="输入密码"
         android:inputType="textPassword"
         android:padding="10dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="0dp"/>
 
+    <TextView
+        android:id="@+id/Rigister_divider2"
+        android:layout_below="@+id/Rigister_EditText_EnterPassword"
+        android:layout_width="320dp"
+        android:layout_height="0.5dip"
+        android:background="#999"/>
     <EditText
         android:id="@+id/Rigister_EditText_ConfirmPassword"
         android:layout_width="320dp"
         android:layout_height="48dp"
-        android:layout_below="@+id/Rigister_EditText_EnterPassword"
+        android:layout_below="@+id/Rigister_divider2"
         android:layout_centerHorizontal="true"
-        android:background="@color/colorLoginEditText"
+        android:background="@drawable/round_edittext2"
         android:ems="12"
         android:hint="确认密码"
+        android:backgroundTint="@color/white"
         android:inputType="textPassword"
         android:padding="10dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="0dp"/>
 
     <Button
         android:id="@+id/Rigister_Button_Rigister"
         android:layout_width="300dp"
         android:layout_height="60dp"
         android:layout_below="@+id/Rigister_EditText_ConfirmPassword"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="40dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/shape"
-        android:textColor="@color/white"
-        android:textSize="18dp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:textSize="20dp"
         android:text="@string/Rigister_Rigister" />
 
     <Button
@@ -97,7 +111,7 @@
         android:paddingBottom="10sp"
         android:paddingTop="10sp"
         android:text="@string/Rigister_Return"
-        android:textColor="#6495ed"
+        android:textColor="#000"
         android:textSize="18sp"
         android:layout_below="@+id/Rigister_Button_Rigister"
         android:layout_centerHorizontal="true" />

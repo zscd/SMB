@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/Activity_Parent_Mainpage_TextView_ClassNoteLeader1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="8:35"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/Activity_Parent_Mainpage_TextView_ClassNoteDetails1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Activity_Parent_Mainpage_TextView_ClassNoteLeader1"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/dimgray"
+        android:layout_marginTop="5dp"
+        android:text="闹钟会在设置时间的前半小时内的浅睡期唤醒"
+        />
+
+    <ImageView
+        android:id="@+id/Activity_Parent_Mainpage_ImageView_PartingLine3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Activity_Parent_Mainpage_TextView_ClassNoteDetails1"
+        android:layout_marginLeft="10dp"
+
+        android:src="@drawable/partingline" />
+
+
+    <Switch
+        android:id="@+id/clockListView_switch"
+        android:layout_marginLeft="300dp"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:track="@drawable/track"
+        android:textOff="   "
+        android:textOn="   "
+        android:layout_gravity="center"
+        android:checked="true"/>
+
+
+</RelativeLayout>

@@ -23,7 +23,9 @@
         <activity android:name=".BottomTabLayoutActivity" />
         <activity android:name=".TabActivity" />
         <activity android:name=".MyFamilyActivity" />
-        <activity android:name=".ChangeDevice"></activity>
+        <activity android:name=".SetClockActivity" />
+        <activity android:name=".ChangeDevice" />
+        <activity android:name=".OnlineDoctor"></activity>
     </application>
 
 </manifest>

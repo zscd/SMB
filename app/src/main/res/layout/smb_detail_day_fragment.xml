@@ -16,39 +16,79 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <RelativeLayout
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/sleep_score_png"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="25dp">-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="140dp"-->
+                    <!--android:layout_height="140dp"-->
+                    <!--android:layout_alignParentTop="true"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:src="@drawable/circle1" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentTop="true"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_marginTop="54dp"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:text="72"-->
+                    <!--android:textSize="35dp" />-->
+
+
+            <!--</RelativeLayout>-->
+
+            <!--<com.shinelw.library.ColorArcProgressBar-->
+                <!--android:layout_width="150dp"-->
+                <!--android:layout_height="150dp"-->
+                <!--android:layout_marginTop="30dp"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:id="@+id/sleep_score_png"-->
+                <!--app:is_need_content="true"-->
+                <!--app:front_color1="#69cbd2"-->
+                <!--app:front_color2="#7eb6e2"-->
+                <!--app:front_color3="#989df7"-->
+                <!--app:max_value="100"-->
+                <!--app:back_width="2dp"-->
+                <!--app:front_width="10dp"-->
+                <!--app:total_engle="270"-->
+                <!--app:is_need_unit="true"-->
+                <!--app:string_unit="分"-->
+                <!--app:is_need_title="true"-->
+                <!--app:string_title="最近一次睡眠"-->
+                <!--app:back_color="@android:color/darker_gray"-->
+                <!--/>-->
+            <com.example.zsk.smb.ColorArcProgressBar
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
                 android:id="@+id/sleep_score_png"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp">
-
-                <ImageView
-                    android:layout_width="140dp"
-                    android:layout_height="140dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:src="@drawable/circle1" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="54dp"
-                    android:textColor="@color/white"
-                    android:text="72"
-                    android:textSize="35dp" />
-
-
-            </RelativeLayout>
-            <TextView
-                android:id="@+id/sleep_png"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/last_score"
-                android:textSize="20dp"
-                android:layout_below="@+id/sleep_score_png"
-                android:layout_centerHorizontal="true" />
+                app:is_need_content="true"
+                app:front_color1="#69cbd2"
+                app:front_color2="#7eb6e2"
+                app:front_color3="#989df7"
+                app:max_value="100"
+                app:back_width="2dp"
+                app:front_width="10dp"
+                app:total_engle="270"
+                app:is_need_unit="true"
+                app:string_unit="分"
+                app:is_need_title="true"
+                app:string_title="最近一次睡眠"
+                app:back_color="@android:color/darker_gray" />
+            <!--<TextView-->
+                <!--android:id="@+id/sleep_png"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/last_score"-->
+                <!--android:textSize="20dp"-->
+                <!--android:layout_below="@+id/sleep_score_png"-->
+                <!--android:layout_centerHorizontal="true" />-->
 
             <!--<ImageView-->
                 <!--android:id="@+id/smb_homeactivity_divider1"-->
@@ -60,7 +100,7 @@
                 <!--android:src="@drawable/ic_shelf_category_divider"/>-->
             <RelativeLayout
                 android:id="@+id/smb_homeactivity_divider1"
-                android:layout_below="@+id/sleep_png"
+                android:layout_below="@+id/sleep_score_png"
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >

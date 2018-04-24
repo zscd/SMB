@@ -2,12 +2,14 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="color_TitleBar">#6699CC</color>
+    <color name="color_TitleBar">#6495ED</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorLoginEditText">#EBECE9</color>
     <color name="colorLoginButton">	#99CCFF</color>
     <color name="colorLoginText">#FFFFFF</color>
     <color name="white">#ffffff</color>
+    <color name="paint_current">#29E516</color>
+    <color name="paint_out">#F6F82B</color>
     <color name="ivory">#fffff0</color> <!-- 象牙色 -->
     <color name="lightyellow">#ffffe0</color> <!-- 亮黄色 -->
     <color name="yellow">#ffff00</color> <!-- 黄色 -->

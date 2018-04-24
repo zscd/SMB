@@ -12,6 +12,8 @@ import com.example.zsk.smb.ByStagesView;
 import com.example.zsk.smb.R;
 import com.example.zsk.smb.custom.LineChartManager;
 import com.github.mikephil.charting.charts.LineChart;
+//import com.shinelw.library.ColorArcProgressBar;
+import com.example.zsk.smb.ColorArcProgressBar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,15 +24,19 @@ import java.util.List;
 
 public class DayDetailsFragment extends Fragment {
 
+    private ColorArcProgressBar bar;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.smb_detail_day_fragment,null);
         LineChart lineChart_1 = (LineChart)view.findViewById(R.id.smb_homeactivity_LineChart_heartrate);
         LineChart lineChart_2 = (LineChart)view.findViewById(R.id.smb_homeactivity_LineChart_breath);
+        bar = (ColorArcProgressBar)view.findViewById(R.id.sleep_score_png);
 
         LineChartManager lineChartManager1 = new LineChartManager(lineChart_1);
         LineChartManager lineChartManager2 = new LineChartManager(lineChart_2);
+
+        bar.setCurrentValues(72);
 
         ByStagesView bs = (ByStagesView) view.findViewById(R.id.test_bs);
         ByStagesData bsd = new ByStagesData();
@@ -64,19 +70,19 @@ public class DayDetailsFragment extends Fragment {
 
         //线的名字集合
         List<String> names = new ArrayList<>();
-        names.add("折线一");
-        names.add("折线二");
-        names.add("折线三");
+        names.add("");
+        names.add("心率");
+        names.add("呼吸");
         names.add("折线四");
 
         lineChartManager1.showLineChart(xValues,yValues.get(0),names.get(1),colours.get(3));
-        lineChartManager1.setDescription("心率");
+        lineChartManager1.setDescription(" ");
         lineChartManager1.setYAxis(150,0,0);
        // lineChartManager1.setHightLimitLine(90,"高心率报警",Color.RED);
         //lineChartManager1.setLowLimitLine(50,"低心率报警");
         lineChartManager2.showLineChart(xValues,yValues.get(1),names.get(2),colours.get(3));
         lineChartManager2.setYAxis(100,0,0);
-        lineChartManager2.setDescription("呼吸");
+        lineChartManager2.setDescription(" ");
         //lineChartManager2.setHightLimitLine(50,"高呼吸次数",Color.RED);
         //lineChartManager2.setLowLimitLine(20,"低呼吸次数");
 
