@@ -20,35 +20,35 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-           <TextView
-               android:layout_width="match_parent"
-               android:layout_height="59dp"
-               android:text="睡眠评分"
-               android:textSize="20dp"
-               android:textColor="#FFF"
-               android:gravity="center"
-               android:background="@color/color_TitleBar"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="59dp"
+                android:text="睡眠评分"
+                android:textSize="20dp"
+                android:textColor="#FFF"
+                android:gravity="center"
+                android:background="@color/color_TitleBar"/>
 
             <!--<com.shinelw.library.ColorArcProgressBar-->
-                <!--android:layout_width="100dp"-->
-                <!--android:layout_height="100dp"-->
-                <!--android:layout_marginTop="10dp"-->
-                <!--android:layout_gravity="center"-->
-                <!--android:id="@+id/smb_homefragment_score"-->
-                <!--app:is_need_content="true"-->
-                <!--app:front_color1="#69cbd2"-->
-                <!--app:front_color2="#7eb6e2"-->
-                <!--app:front_color3="#989df7"-->
-                <!--app:max_value="100"-->
-                <!--app:back_width="2dp"-->
-                <!--app:front_width="10dp"-->
-                <!--app:total_engle="270"-->
-                <!--app:is_need_unit="true"-->
-                <!--app:string_unit="分"-->
-                <!--app:is_need_title="true"-->
-                <!--app:string_title="最近一次睡眠"-->
-                <!--app:back_color="@android:color/darker_gray"-->
-                <!--/>-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:id="@+id/smb_homefragment_score"-->
+            <!--app:is_need_content="true"-->
+            <!--app:front_color1="#69cbd2"-->
+            <!--app:front_color2="#7eb6e2"-->
+            <!--app:front_color3="#989df7"-->
+            <!--app:max_value="100"-->
+            <!--app:back_width="2dp"-->
+            <!--app:front_width="10dp"-->
+            <!--app:total_engle="270"-->
+            <!--app:is_need_unit="true"-->
+            <!--app:string_unit="分"-->
+            <!--app:is_need_title="true"-->
+            <!--app:string_title="最近一次睡眠"-->
+            <!--app:back_color="@android:color/darker_gray"-->
+            <!--/>-->
             <com.example.zsk.smb.ColorArcProgressBar
                 android:layout_width="100dp"
                 android:layout_height="100dp"
@@ -81,13 +81,13 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="0dp" />
 
-           <TextView
-               android:layout_width="match_parent"
-               android:layout_height="0.5dip"
-               android:layout_marginLeft="10dp"
-               android:layout_marginRight="10dp"
-               android:background="#999"
-               android:layout_marginTop="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#999"
+                android:layout_marginTop="20dp"/>
             <LinearLayout
                 android:id="@+id/linearlayout_2"
                 android:layout_width="match_parent"
@@ -97,14 +97,14 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:weightSum="1.0">
-                
+
                 <TextView
                     android:layout_width="0.5dp"
                     android:layout_height="match_parent"
                     android:background="#999" />
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="40dp" 
+                    android:layout_height="40dp"
                     android:text="入睡时间"
                     android:gravity="center"
                     android:layout_weight="0.25"/>

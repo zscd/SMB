@@ -1,426 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:background="@android:color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/Service_AllFunctions_LinearLayout"
-    android:background="@color/ivory">
-
-
+    android:backgroundTint="#FFF">
     <LinearLayout
-        android:id="@+id/Activity_AllFunctions_LinearLayout_Main"
+        android:id="@+id/smb_service_title"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:background="@color/color_TitleBar"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="15dp"
+            android:src="@drawable/alarm_icon"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:src="@drawable/switch_icon"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:src="@drawable/doctor_icon"/>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_below="@id/smb_service_title"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:id="@+id/smb_service_scrollview"
+        android:layout_alignParentLeft="true"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Activity_AllFunctions_LinearLayout_Function"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/Activity_AllFunctions_LinearLayout_FirstRowFunction"
-                android:layout_marginTop="30dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:id="@+id/Activity_AllFunctions_LinearLayout_Function1"
-                    android:orientation="vertical">
-                    <ImageView
-                        android:id="@+id/Activity_AllFunctions_ImageView_Function1"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/clock" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="智能闹钟"
-                        android:layout_marginTop="5dp"
-                        android:id="@+id/Activity_AllFunctions_TextView_Function1"
-                        android:textColor="@color/black"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:id="@+id/Activity_AllFunctions_LinearLayout_Function2"
-                    android:orientation="vertical">
-
-
-                    <ImageView
-                        android:id="@+id/Activity_AllFunctions_ImageView_Function2"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/ic_switch" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
-                        android:id="@+id/Activity_AllFunctions_TextView_Function2"
-                        android:textColor="@color/black"
-                        android:text="报警开关" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:id="@+id/Activity_AllFunctions_LinearLayout_Function3"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/Activity_AllFunctions_ImageView_Function3"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/doctor" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:id="@+id/Activity_AllFunctions_TextView_Function3"
-                        android:textColor="@color/black"
-                        android:layout_marginTop="5dp"
-                        android:text="在线医生" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/Activity_AllFunctions_LinearLayout_SecondRowFunction"
-                android:layout_marginTop="30dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/Activity_AllFunctions_LinearLayout_Function4"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/Activity_AllFunctions_ImageView_Function4"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/link" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:textColor="@color/black"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
-                        android:id="@+id/Activity_AllFunctions_TextView_Function4"
-                        android:text="官网链接" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:id="@+id/Activity_AllFunctions_LinearLayout_Function5"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/Activity_AllFunctions_ImageView_Function5"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/help" />
-
-                    <TextView
-                        android:id="@+id/Activity_AllFunctions_TextView_Function5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:textColor="@color/black"
-                        android:layout_marginTop="5dp"
-                        android:text="帮助" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/Activity_AllFunctions_LinearLayout_Function6"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/Activity_AllFunctions_ImageView_Function6"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/aftersale_server" />
-
-                    <TextView
-                        android:id="@+id/Activity_AllFunctions_TextView_Function6"
-                        android:layout_width="wrap_content"
-                        android:textColor="@color/black"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:layout_gravity="center"
-                        android:text="售后服务" />
-                </LinearLayout>
-
-            </LinearLayout>
-        </LinearLayout>
-        <ScrollView
-            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/Activity_Parent_Mainpage_ScrollView"
-            android:layout_marginTop="30dp"
-            android:layout_weight="3">
-
-            <LinearLayout
+            android:orientation="vertical"
+            >
+            <RelativeLayout
+                android:background="@color/color_TitleBar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/Activity_Parent_Mainpage_ScrollView_LinearLayout"
-                android:orientation="vertical">
-
-                <LinearLayout
+                android:layout_height="200dp"
+                >
+                <com.example.zsk.smb.ClockView
+                    android:layout_margin="20dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/Activity_Parent_Mainpage_ScrollView_LinearLayout_Main"
-                    android:orientation="vertical">
+                    android:id="@+id/clock"
+                    android:layout_height="match_parent" />
 
-                    <ImageView
-                        android:id="@+id/Activity_Parent_Mainpage_ImageView_PartingLine1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/partingline" />
+            </RelativeLayout>
+            <ListView
+                android:id="@+id/clockListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/Activity_Parent_Mainpage_RelativeLayout_EducationNews">
+            </ListView>
 
-                        <TextView
-                            android:id="@+id/Activity_Parent_Mainpage_TextView_EducationNews"
-                            android:layout_width="40dp"
-                            android:layout_height="20dp"
-                            android:layout_marginLeft="10dp"
-                            android:textColor="@color/color_TitleBar"
-                            android:text="睡眠贴士"
-                            android:textSize="10dp" />
-
-                        <ImageView
-                            android:id="@+id/Activity_Parent_Mainpage_ImageView_EducationNews"
-                            android:layout_width="80dp"
-                            android:layout_height="55dp"
-                            android:layout_below="@+id/Activity_Parent_Mainpage_TextView_EducationNews"
-
-                            android:src="@drawable/img_test"
-                            android:layout_alignStart="@+id/Activity_Parent_Mainpage_TextView_EducationNews"
-                            android:layout_alignLeft="@+id/Activity_Parent_Mainpage_TextView_EducationNews"/>
-
-
-                        <TextView
-                            android:id="@+id/Activity_Parent_Mainpage_TextView_EducationNewsLeader"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/Activity_Parent_Mainpage_TextView_EducationNews"
-                            android:layout_marginLeft="95dp"
-                            android:text="如何快速入眠"
-                            android:textColor="@color/black"
-                            android:textSize="18dp" />
-
-                        <TextView
-                            android:id="@+id/Activity_Parent_Mainpage_TextView_EducationNewsDetails"
-                            android:layout_width="wrap_content"
-
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/Activity_Parent_Mainpage_TextView_EducationNewsLeader"
-                            android:layout_marginLeft="95dp"
-                            android:layout_marginRight="50dp"
-                            android:layout_marginTop="5dp"
-                            android:text="长期缺乏睡眠或睡眠质量不佳，会对生活质量造成很大的影响，会出现..."
-                            android:textColor="@color/dimgray"
-                            />
-
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:id="@+id/Activity_Parent_Mainpage_RelativeLayout_ClassNote"
-                        android:layout_width="match_parent"
-                        android:layout_height="20dp"
-                        android:layout_below="@id/Activity_Parent_Mainpage_RelativeLayout_EducationNews">
-
-                        <ImageView
-                            android:id="@+id/Activity_Parent_Mainpage_ImageView_PartingLine2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/partingline" />
-
-                        <TextView
-                            android:id="@+id/Activity_Parent_Mainpage_TextView_ClassNote"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="6dp"
-                            android:text="智能闹钟"
-                            android:textColor="@color/green"
-                            android:textSize="10dp" />
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/message">
-
-
-
-                        <TextView
-                            android:id="@+id/Activity_Parent_Mainpage_TextView_ClassNoteLeader1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:text="8:35"
-                            android:textColor="@color/black"
-                            android:textSize="18dp" />
-
-                        <TextView
-                            android:id="@+id/Activity_Parent_Mainpage_TextView_ClassNoteDetails1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/Activity_Parent_Mainpage_TextView_ClassNoteLeader1"
-                            android:layout_marginLeft="10dp"
-                            android:textColor="@color/dimgray"
-                            android:layout_marginTop="5dp"
-                            android:text="闹钟会在设置时间的前半小时内的浅睡期唤醒"
-                            />
-
-                        <ImageView
-                            android:id="@+id/Activity_Parent_Mainpage_ImageView_PartingLine3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/Activity_Parent_Mainpage_TextView_ClassNoteDetails1"
-                            android:layout_marginLeft="10dp"
-
-                            android:src="@drawable/partingline" />
-
-                        <TextView
-                            android:id="@+id/Activity_Parent_Mainpage_TextView_ClassNoteLeader2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/Activity_Parent_Mainpage_ImageView_PartingLine3"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="5dp"
-                            android:text="9:40"
-                            android:textColor="@color/black"
-                            android:textSize="18dp" />
-                        <TextView
-                            android:id="@+id/Activity_Parent_Mainpage_TextView_ClassNoteDetails2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/Activity_Parent_Mainpage_TextView_ClassNoteLeader2"
-                            android:layout_marginLeft="10dp"
-                            android:textColor="@color/dimgray"
-                            android:layout_marginTop="5dp"
-                            android:text="闹钟未开启"
-                            />
-                        <Switch
-                            android:layout_marginLeft="270dp"
-                            android:layout_width="70dp"
-                            android:layout_height="50dp"
-                            android:track="@drawable/track"
-                            android:textOff="   "
-                            android:textOn="   "
-                            android:layout_gravity="center"
-                            android:checked="true"/>
-                        <Switch
-                            android:layout_marginTop="50dp"
-                            android:layout_marginLeft="270dp"
-                            android:layout_width="70dp"
-                            android:layout_height="50dp"
-                            android:track="@drawable/track"
-                            android:textOff="   "
-                            android:textOn="   "
-                            android:layout_gravity="center" />
-
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:id="@+id/Activity_Parent_Mainpage_RelativeLayout_LatestNews"
-                        android:layout_width="match_parent"
-                        android:layout_height="20dp"
-                        android:layout_below="@id/Activity_Parent_Mainpage_RelativeLayout_EducationNews">
-
-                        <ImageView
-                            android:id="@+id/Activity_Parent_Mainpage_ImageView_PartingLine4"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/partingline" />
-
-                        <TextView
-                            android:id="@+id/Activity_Parent_Mainpage_TextView_LatestNews"
-                            android:layout_width="wrap_content"
-                            android:textColor="@color/red"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="6dp"
-                            android:text="危险警告"
-                            android:textSize="10dp"
-                            />
-
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:id="@+id/Activity_Parent_Mainpage_RelativeLayout_LatestNewsDetails"
-                        android:layout_height="wrap_content">
-
-
-                        <TextView
-                            android:id="@+id/Activity_Parent_Mainpage_TextView_LatestNewsLeader1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="10dp"
-                            android:text="呼吸暂停"
-                            android:textColor="@color/black"
-                            android:textSize="18dp" />
-
-                        <TextView
-                            android:id="@+id/Activity_Parent_Mainpage_TextView_LatestNewsDetails1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/Activity_Parent_Mainpage_TextView_LatestNewsLeader1"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="5dp"
-                            android:textColor="@color/dimgray"
-                            android:text="您在 4-7 日 01:23 出现 22 秒的呼吸暂停，建议及时就医"
-                            />
-
-                        <ImageView
-                            android:id="@+id/Activity_Parent_Mainpage_ImageView_PartingLine5"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/Activity_Parent_Mainpage_TextView_LatestNewsDetails1"
-                            android:layout_marginLeft="10dp"
-                            android:src="@drawable/partingline" />
-
-
-                    </RelativeLayout>
-
-                </LinearLayout>
-            </LinearLayout>
-        </ScrollView>
-    </LinearLayout>
-
-</LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
