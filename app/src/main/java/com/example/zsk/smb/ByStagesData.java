@@ -5,6 +5,7 @@ public class ByStagesData {
     private String start;
     private String end;
     private float[] stime;
+
     private int[] svalue;
 
     public void setStart(String s){
@@ -25,10 +26,10 @@ public class ByStagesData {
     }
     public float[] getWeight(){
         return stime;
-    }
+    }            //返回各分期时间
     public int[] getSvalue(){
         return svalue;
-    }
+    }             //返回分期状态
     public String getStart(){
         return start;
     }

@@ -4,7 +4,8 @@
     android:orientation="vertical"
     android:background="@android:color/white"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:backgroundTint="#FFFFF0">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,19 +34,51 @@
 
                 </com.example.zsk.smb.ByStagesView>
             </RelativeLayout>
-            <ImageView
-                android:layout_below="@id/smb_week_conditions"
-                android:id="@+id/smb_month_divider2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_shelf_category_divider" />
+            <!--<ImageView-->
+                <!--android:layout_below="@id/smb_week_conditions"-->
+                <!--android:id="@+id/smb_month_divider2"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:adjustViewBounds="true"-->
+                <!--android:scaleType="fitXY"-->
+                <!--android:src="@drawable/ic_shelf_category_divider" />-->
+            <RelativeLayout
+                android:id="@+id/smb_week_divider2"
+                android:layout_below="@+id/smb_week_conditions"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:text="睡眠分期"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#999" />
+                <TextView
+                    android:layout_width="150dip"
+                    android:layout_height="1dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/tv"
+                    android:background="#999" />
+                <TextView
+                    android:layout_width="150dip"
+                    android:layout_height="1dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv"
+                    android:background="#999" />
+            </RelativeLayout>
+
+
             <LinearLayout
                 android:id="@+id/linearlayout_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/smb_month_divider2"
+                android:layout_below="@+id/smb_week_divider2"
                 android:layout_marginTop="30dp"
                 android:orientation="horizontal">
 
@@ -151,14 +184,45 @@
 
             </LinearLayout>
 
-            <ImageView
-                android:layout_below="@id/linearlayout_4"
+            <!--<ImageView-->
+                <!--android:layout_below="@id/linearlayout_4"-->
+                <!--android:id="@+id/smb_week_divider3"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:adjustViewBounds="true"-->
+                <!--android:scaleType="fitXY"-->
+                <!--android:src="@drawable/ic_shelf_category_divider" />-->
+            <RelativeLayout
                 android:id="@+id/smb_week_divider3"
+                android:layout_below="@+id/linearlayout_4"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_shelf_category_divider" />
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:text="睡眠异常"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#999" />
+                <TextView
+                    android:layout_width="150dip"
+                    android:layout_height="1dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/tv2"
+                    android:background="#999" />
+                <TextView
+                    android:layout_width="150dip"
+                    android:layout_height="1dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv2"
+                    android:background="#999" />
+            </RelativeLayout>
+
 
             <LinearLayout
                 android:layout_below="@+id/smb_week_divider3"

@@ -12,14 +12,16 @@ import com.example.zsk.smb.fragments.ProfileFragment;
 import com.example.zsk.smb.fragments.ServiceFragment;
 import com.example.zsk.smb.fragments.StatisticsFragment;
 
+import static android.R.attr.x;
+
 /**
  * Created by vicsun on 2018/3/5.
  */
 
 public class DataGenerator {
 
-    public static final int []mTabRes = new int[]{R.drawable.tab_home_selector,R.drawable.tab_discovery_selector,R.drawable.tab_attention_selector,R.drawable.tab_profile_selector};
-    public static final int []mTabResPressed = new int[]{R.drawable.ic_tab_strip_icon_feed_selected,R.drawable.ic_tab_strip_icon_category_selected,R.drawable.ic_tab_strip_icon_pgc_selected,R.drawable.ic_tab_strip_icon_profile_selected};
+    public static final int []mTabRes = new int[]{R.mipmap.home_icon,R.mipmap.service_icon,R.mipmap.count_icon_noselect,R.drawable.mine};
+    public static final int []mTabResPressed = new int[]{R.mipmap.home_icon_selected,R.mipmap.service_icon_selected,R.drawable.statistic_check,R.drawable.mine_checked};
     public static final String[]mTabTitle = new String[]{"首页","服务","统计","我的"};
 
     public static Fragment[] getFragments(String from){

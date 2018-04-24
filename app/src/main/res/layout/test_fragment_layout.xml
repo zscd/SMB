@@ -1,55 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@android:color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
-    <!--<TextView-->
+    android:backgroundTint="#FFFFF0">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/smb_home_scrollview"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+    <!--<RelativeLayout-->
         <!--android:id="@+id/smb_homefragment_score"-->
-        <!--android:layout_height="wrap_content"-->
         <!--android:layout_width="match_parent"-->
-        <!--android:layout_marginTop="40dp"-->
-        <!--android:text="72"-->
-        <!--android:gravity="center"-->
-        <!--android:textSize="40dp"-->
-        <!--/>-->
-    <RelativeLayout
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="35dp">-->
+        <!--<ImageView-->
+            <!--android:src="@drawable/circle1"-->
+            <!--android:layout_width="140dp"-->
+            <!--android:layout_height="140dp"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_centerHorizontal="true" />-->
+        <!--<TextView-->
+            <!--android:text="72"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="#FFF"-->
+            <!--android:textSize="35dp"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginTop="54dp" />-->
+
+    <!--</RelativeLayout>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <com.shinelw.library.ColorArcProgressBar
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
         android:id="@+id/smb_homefragment_score"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp">
-        <ImageView
-            android:src="@drawable/circle"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
-        <TextView
-            android:text="72"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="35dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="54dp" />
+        app:is_need_content="true"
+        app:front_color1="#69cbd2"
+        app:front_color2="#7eb6e2"
+        app:front_color3="#989df7"
+        app:max_value="100"
+        app:back_width="2dp"
+        app:front_width="10dp"
+        app:total_engle="270"
+        app:is_need_unit="true"
+        app:string_unit="分"
+        app:is_need_title="true"
+        app:string_title="最近一次睡眠"
+        app:back_color="@android:color/darker_gray"
+        />
 
-    </RelativeLayout>
 
-    <TextView
-        android:id="@+id/sleep_score"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/last_score"
-        android:gravity="center"
-        android:textSize="20dp"
-        android:layout_below="@+id/smb_homefragment_score" />
 
     <LinearLayout
         android:id="@+id/linearlayout_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/sleep_score"
+        android:layout_below="@+id/smb_homefragment_score"
         android:layout_marginTop="50dp"
         android:orientation="horizontal">
 
@@ -58,6 +77,7 @@
             android:layout_height="40dp"
             android:gravity="center"
             android:layout_weight="1.0"
+            android:textSize="20dp"
             android:text="00:00"/>
 
         <TextView
@@ -66,6 +86,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:layout_weight="1.0"
+            android:textSize="20dp"
             android:text="08:00" />
 
     </LinearLayout>
@@ -84,12 +105,14 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:layout_weight="1.0"
+            android:textSize="20dp"
             android:text="入睡时间" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:layout_weight="1.0"
+            android:textSize="20dp"
             android:text="醒来时间" />
 
     </LinearLayout>
@@ -110,6 +133,7 @@
         android:layout_height="40dp"
         android:text="0时0分"
         android:gravity="center"
+        android:textSize="20dp"
         android:layout_weight="1.0" />
 
         <TextView
@@ -118,6 +142,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:layout_weight="1.0"
+            android:textSize="20dp"
             android:text="0时0分" />
 
     </LinearLayout>
@@ -137,12 +162,14 @@
             android:layout_height="50dp"
             android:gravity="center"
             android:layout_weight="1.0"
+            android:textSize="20dp"
             android:text="深睡时长"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:gravity="center"
             android:layout_weight="1.0"
+            android:textSize="20dp"
             android:text="浅睡时长"/>
 
     </LinearLayout>
@@ -156,6 +183,9 @@
         android:gravity="center"
         android:textColor="#000"
         android:layout_below="@+id/linearlayout_4"
-        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
         android:layout_marginTop="35dp" />
+
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

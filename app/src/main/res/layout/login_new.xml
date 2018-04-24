@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="20dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="20dp"
+    tools:context="com.example.zsk.smb.LoginActivity"
+    android:orientation="vertical"
+    android:background="@color/color_TitleBar">
+
+    <!--<TextView-->
+        <!--android:id="@+id/Login_TextView_Title"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_marginTop="100dp"-->
+        <!--android:background="@color/color_TitleBar"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:paddingBottom="7dp"-->
+        <!--android:paddingTop="8dp"-->
+        <!--android:text="@string/Login_Title"-->
+        <!--android:textColor="#ffffff"-->
+        <!--android:textSize="40dp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:typeface="sans"/>-->
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/logo"/>
+
+
+    <EditText
+        android:id="@+id/login_id"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="8dp"
+        android:background="@drawable/round_edittext"
+        android:hint="@string/text_login_id"/>
+
+    <TextView
+        android:layout_width="320dp"
+        android:layout_height="0.5dip"
+        android:background="#999"/>
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="0dp"
+        android:paddingLeft="8dp"
+        android:background="@drawable/round_edittext2"
+        android:inputType="textPassword"
+        android:hint="@string/text_login_password"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp">
+
+        <CheckBox
+            android:id="@+id/login_remember_password"
+            android:layout_width="100dp"
+            android:layout_height="32dp"
+            android:theme="@style/My_CheckBox"
+            android:text="@string/remember_password"
+            android:textSize="15sp"/>
+        <CheckBox
+            android:id="@+id/login_auto_login"
+            android:layout_width="100dp"
+            android:layout_height="32dp"
+            android:text="@string/auto_login"
+            android:theme="@style/My_CheckBox"
+            android:textSize="15sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/shape"
+        android:text="@string/text_login_button"
+        android:layout_marginTop="40dp"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/activity_login_button_zhuce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="快速注册"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="50dp"
+        android:textColor="#000"
+        android:textSize="18dp"
+        android:layout_gravity="center" />
+</LinearLayout>

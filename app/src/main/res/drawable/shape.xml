@@ -3,7 +3,7 @@
     //设置圆角
     <corners android:radius="10dp" />
     //设置button的颜色
-    <solid android:color="@color/colorLoginButton"/>
+    <solid android:color="@color/colorLoginEditText"/>
     //设置button的大小
     <size
         android:height="60dp"

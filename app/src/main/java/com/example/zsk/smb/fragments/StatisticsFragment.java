@@ -3,25 +3,38 @@ package com.example.zsk.smb.fragments;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.LinearLayoutCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.ServiceWorkerClient;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
+
 import com.example.zsk.smb.DetailsActivity;
 import com.example.zsk.smb.R;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class StatisticsFragment extends Fragment {
     private ListView listView;
+    private SwipeRefreshLayout swipeRefresh;
+    public static final int UPDATE_FLAG = 1;
+
+//    public Handler handler = new Handler(){
+//        public void handleMessage(Message msg){
+//            switch(msg.what){
+//                case UPDATE_FLAG:
+//                    SwipeRefreshLayout.setRefreshing(false);
+//            }
+//        }
+//    };
     public static StatisticsFragment newInstance(String from){
         StatisticsFragment fragment = new StatisticsFragment();
         Bundle bundle = new Bundle();
@@ -37,6 +50,16 @@ public class StatisticsFragment extends Fragment {
         View view = inflater.inflate(R.layout.test,null);
         listView = (ListView)view.findViewById(R.id.testListView);
         HistoryAdapter adapter = new HistoryAdapter(getContext(), R.layout.listview_item);
+        swipeRefresh = (SwipeRefreshLayout) view.findViewById(R.id.swipe_refresh);
+        swipeRefresh.setColorSchemeResources(R.color.colorPrimary);
+        swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                refreshListView();
+            }
+        });
+        adapter.notifyDataSetChanged();
+
 
         adapter.add("2018/03/28");
         adapter.add("2018/03/29");
@@ -45,6 +68,11 @@ public class StatisticsFragment extends Fragment {
         adapter.add("2018/04/01");
         adapter.add("2018/04/02");
         adapter.add("2018/04/03");
+        adapter.add("2018/04/04");
+        adapter.add("2018/04/05");
+        adapter.add("2018/04/06");
+        adapter.add("2018/04/07");
+        adapter.add("2018/04/08");
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -78,5 +106,26 @@ public class StatisticsFragment extends Fragment {
 
             return view;
         }
+    }
+    private void refreshListView(){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try{
+                    Thread.sleep(2000);
+//                    Message message = new Message();
+//                    message.what = UPDATE_FLAG;
+//                    handler.sendMessage(message);
+
+                }catch (InterruptedException e){
+                    e.printStackTrace();
+                }
+                getActivity().runOnUiThread(new Runnable(){
+                    public void run(){
+                        swipeRefresh.setRefreshing(false);
+                    }
+                });
+            }
+        }).start();
     }
 }

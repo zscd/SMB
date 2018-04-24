@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@android:color/white"
+    android:background="#FFFFF0"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ScrollView
@@ -16,47 +16,118 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <RelativeLayout
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/sleep_score_png"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="25dp">-->
+
+                <!--<ImageView-->
+                    <!--android:layout_width="140dp"-->
+                    <!--android:layout_height="140dp"-->
+                    <!--android:layout_alignParentTop="true"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:src="@drawable/circle1" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentTop="true"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:layout_marginTop="54dp"-->
+                    <!--android:textColor="@color/white"-->
+                    <!--android:text="72"-->
+                    <!--android:textSize="35dp" />-->
+
+
+            <!--</RelativeLayout>-->
+
+            <!--<com.shinelw.library.ColorArcProgressBar-->
+                <!--android:layout_width="150dp"-->
+                <!--android:layout_height="150dp"-->
+                <!--android:layout_marginTop="30dp"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:id="@+id/sleep_score_png"-->
+                <!--app:is_need_content="true"-->
+                <!--app:front_color1="#69cbd2"-->
+                <!--app:front_color2="#7eb6e2"-->
+                <!--app:front_color3="#989df7"-->
+                <!--app:max_value="100"-->
+                <!--app:back_width="2dp"-->
+                <!--app:front_width="10dp"-->
+                <!--app:total_engle="270"-->
+                <!--app:is_need_unit="true"-->
+                <!--app:string_unit="分"-->
+                <!--app:is_need_title="true"-->
+                <!--app:string_title="最近一次睡眠"-->
+                <!--app:back_color="@android:color/darker_gray"-->
+                <!--/>-->
+            <com.example.zsk.smb.ColorArcProgressBar
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
                 android:id="@+id/sleep_score_png"
+                app:is_need_content="true"
+                app:front_color1="#69cbd2"
+                app:front_color2="#7eb6e2"
+                app:front_color3="#989df7"
+                app:max_value="100"
+                app:back_width="2dp"
+                app:front_width="10dp"
+                app:total_engle="270"
+                app:is_need_unit="true"
+                app:string_unit="分"
+                app:is_need_title="true"
+                app:string_title="最近一次睡眠"
+                app:back_color="@android:color/darker_gray" />
+            <!--<TextView-->
+                <!--android:id="@+id/sleep_png"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/last_score"-->
+                <!--android:textSize="20dp"-->
+                <!--android:layout_below="@+id/sleep_score_png"-->
+                <!--android:layout_centerHorizontal="true" />-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/smb_homeactivity_divider1"-->
+                <!--android:layout_below="@+id/sleep_png"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:adjustViewBounds="true"-->
+                <!--android:scaleType="fitXY"-->
+                <!--android:src="@drawable/ic_shelf_category_divider"/>-->
+            <RelativeLayout
+                android:id="@+id/smb_homeactivity_divider1"
+                android:layout_below="@+id/sleep_score_png"
+                android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp">
-
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:src="@drawable/circle" />
-
+                android:layout_height="wrap_content" >
                 <TextView
+                    android:id="@+id/tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="54dp"
-                    android:text="72"
-                    android:textSize="35dp" />
-
-
+                    android:layout_centerInParent="true"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:text="睡眠分期"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#999" />
+                <TextView
+                    android:layout_width="150dip"
+                    android:layout_height="1dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/tv"
+                    android:background="#999" />
+                <TextView
+                    android:layout_width="150dip"
+                    android:layout_height="1dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv"
+                    android:background="#999" />
             </RelativeLayout>
-            <TextView
-                android:id="@+id/sleep_png"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/last_score"
-                android:textSize="20dp"
-                android:layout_below="@+id/sleep_score_png"
-                android:layout_centerHorizontal="true" />
-
-            <ImageView
-                android:id="@+id/smb_homeactivity_divider1"
-                android:layout_below="@+id/sleep_png"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_shelf_category_divider"/>
             <RelativeLayout
                 android:id="@+id/smb_homeactivity_conditions"
                 android:layout_below="@+id/smb_homeactivity_divider1"
@@ -66,22 +137,12 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp">
-                <!--<com.github.mikephil.charting.charts.BarChart-->
-                    <!--android:id="@+id/smb_homeactivity_barchart_conditions"-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="122dp"-->
-                    <!--/>-->
                 <com.example.zsk.smb.ByStagesView
                     android:id="@+id/test_bs"
                     android:layout_width="match_parent"
                     android:layout_height="120dp">
 
                 </com.example.zsk.smb.ByStagesView>
-                <!--<TextView-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_below="@+id/smb_homeactivity_barchart_conditions"-->
-                    <!--/>-->
 
                 <LinearLayout
                     android:id="@+id/linearlayout_1"
@@ -194,14 +255,45 @@
                 </LinearLayout>
 
             </RelativeLayout>
-            <ImageView
-                android:layout_below="@id/smb_homeactivity_conditions"
+            <!--<ImageView-->
+                <!--android:layout_below="@id/smb_homeactivity_conditions"-->
+                <!--android:id="@+id/smb_homeactivity_divider2"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:adjustViewBounds="true"-->
+                <!--android:scaleType="fitXY"-->
+                <!--android:src="@drawable/ic_shelf_category_divider" />-->
+            <RelativeLayout
                 android:id="@+id/smb_homeactivity_divider2"
+                android:layout_below="@id/smb_homeactivity_conditions"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_shelf_category_divider" />
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:text="心率数据"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#999" />
+                <TextView
+                    android:layout_width="150dip"
+                    android:layout_height="1dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/tv2"
+                    android:background="#999" />
+                <TextView
+                    android:layout_width="150dip"
+                    android:layout_height="1dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv2"
+                    android:background="#999" />
+            </RelativeLayout>
+
             <RelativeLayout
                 android:layout_below="@id/smb_homeactivity_divider2"
                 android:id="@+id/smb_homeactivity_heartrate"
@@ -241,14 +333,45 @@
                 </LinearLayout>
 
             </RelativeLayout>
-            <ImageView
-                android:layout_below="@id/smb_homeactivity_heartrate"
+            <!--<ImageView-->
+                <!--android:layout_below="@id/smb_homeactivity_heartrate"-->
+                <!--android:id="@+id/smb_homeactivity_divider3"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:adjustViewBounds="true"-->
+                <!--android:scaleType="fitXY"-->
+                <!--android:src="@drawable/ic_shelf_category_divider" />-->
+            <RelativeLayout
                 android:id="@+id/smb_homeactivity_divider3"
+                android:layout_below="@id/smb_homeactivity_heartrate"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_shelf_category_divider" />
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:text="呼吸数据"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#999" />
+                <TextView
+                    android:layout_width="150dip"
+                    android:layout_height="1dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/tv3"
+                    android:background="#999" />
+                <TextView
+                    android:layout_width="150dip"
+                    android:layout_height="1dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv3"
+                    android:background="#999" />
+            </RelativeLayout>
+
             <RelativeLayout
                 android:layout_below="@id/smb_homeactivity_divider3"
                 android:id="@+id/smb_homeactivity_breath"
@@ -288,14 +411,45 @@
                 </LinearLayout>
 
             </RelativeLayout>
-            <ImageView
-                android:layout_below="@id/smb_homeactivity_breath"
+            <!--<ImageView-->
+                <!--android:layout_below="@id/smb_homeactivity_breath"-->
+                <!--android:id="@+id/smb_homeactivity_divider4"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:adjustViewBounds="true"-->
+                <!--android:scaleType="fitXY"-->
+                <!--android:src="@drawable/ic_shelf_category_divider" />-->
+
+            <RelativeLayout
                 android:id="@+id/smb_homeactivity_divider4"
+                android:layout_below="@+id/smb_homeactivity_breath"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_shelf_category_divider" />
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:text="睡眠异常"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#999" />
+                <TextView
+                    android:layout_width="150dip"
+                    android:layout_height="1dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/tv4"
+                    android:background="#999" />
+                <TextView
+                    android:layout_width="150dip"
+                    android:layout_height="1dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv4"
+                    android:background="#999" />
+            </RelativeLayout>
 
             <LinearLayout
                 android:layout_below="@+id/smb_homeactivity_divider4"
@@ -348,30 +502,60 @@
                 </LinearLayout>
 
             </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/smb_homeactivity_divider5"
+                android:layout_below="@+id/smb_homeactivity_danger"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content" >
+                <TextView
+                    android:id="@+id/tv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginRight="5dip"
+                    android:text="睡眠建议"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#999" />
+                <TextView
+                    android:layout_width="150dip"
+                    android:layout_height="1dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/tv5"
+                    android:background="#999" />
+                <TextView
+                    android:layout_width="150dip"
+                    android:layout_height="1dip"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tv5"
+                    android:background="#999" />
+            </RelativeLayout>
+
             <LinearLayout
-                android:layout_below="@id/smb_homeactivity_danger"
+                android:layout_below="@id/smb_homeactivity_divider5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/smb_homeactivity_suggest"
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:layout_marginTop="40dp"
                 android:minHeight="60dp">
+
+                <ImageView
+                    android:src="@drawable/doctor2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:gravity="center"
                     android:textSize="20dp"
-                    android:text="睡眠建议"/>
+                    android:text="@string/suggest"/>
             </LinearLayout>
         </RelativeLayout>
     </ScrollView>
-    <ImageView
-        android:layout_below="@id/smb_homeactivity_scrollview"
-        android:id="@+id/smb_homeactivity_divider5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_shelf_category_divider" />
 
 
 

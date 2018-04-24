@@ -2,12 +2,14 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="color_TitleBar">#0e7cab</color>
+    <color name="color_TitleBar">#6495ED</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorLoginEditText">#EBECE9</color>
-    <color name="colorLoginButton">	#4C1219EC</color>
+    <color name="colorLoginButton">	#99CCFF</color>
     <color name="colorLoginText">#FFFFFF</color>
     <color name="white">#ffffff</color>
+    <color name="paint_current">#29E516</color>
+    <color name="paint_out">#F6F82B</color>
     <color name="ivory">#fffff0</color> <!-- 象牙色 -->
     <color name="lightyellow">#ffffe0</color> <!-- 亮黄色 -->
     <color name="yellow">#ffff00</color> <!-- 黄色 -->
@@ -148,7 +150,7 @@
     <color name="teal">#008080</color> <!-- 水鸭色 -->
     <color name="green">#008000</color> <!-- 绿色 -->
     <color name="darkgreen">#006400</color> <!-- 暗绿色 -->
-    <color name="blue">#0000ff</color> <!-- 蓝色 -->
+    <color name="blue">#1296db</color> <!-- 蓝色 -->
     <color name="mediumblue">#0000cd</color> <!-- 中兰色 -->
     <color name="darkblue">#00008b</color> <!-- 暗蓝色 -->
     <color name="navy">#000080</color> <!-- 海军色 -->
