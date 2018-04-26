@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFF0"
+    android:background="#FFF"
     tools:context="com.example.zsk.smb.OnlineDoctor">
 
     <LinearLayout
@@ -12,20 +12,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#1c86ee">
+        android:background="@color/color_TitleBar">
 
         <ImageView
             android:id="@+id/return_arrow"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="5dp"
             android:layout_marginBottom="5dp"
-            android:src="@drawable/left_arrow" />
+            android:src="@drawable/return_arrow" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="在线医生"
+            android:textSize="20dp"
+            android:textColor="#FFF"
             android:layout_gravity="center"/>
 
     </LinearLayout>

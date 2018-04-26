@@ -20,8 +20,8 @@ import static android.R.attr.x;
 
 public class DataGenerator {
 
-    public static final int []mTabRes = new int[]{R.mipmap.home_icon,R.mipmap.service_icon,R.mipmap.count_icon_noselect,R.drawable.mine};
-    public static final int []mTabResPressed = new int[]{R.mipmap.home_icon_selected,R.mipmap.service_icon_selected,R.drawable.statistic_check,R.drawable.mine_checked};
+    public static final int []mTabRes = new int[]{R.mipmap.home_icon,R.mipmap.service_icon,R.mipmap.count_icon_noselect,R.mipmap.user_icon};
+    public static final int []mTabResPressed = new int[]{R.mipmap.home_icon_selected,R.mipmap.service_icon_selected,R.mipmap.count_icon_selected,R.mipmap.user_icon_selected};
     public static final String[]mTabTitle = new String[]{"首页","服务","统计","我的"};
 
     public static Fragment[] getFragments(String from){

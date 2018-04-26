@@ -1,50 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="10dp">
+    android:layout_height="79dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:padding="10dp"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/smb_clock_text_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8:35"
+                android:textSize="29dp"
+                android:layout_marginRight="15dp"/>
+            <TextView
+                android:textSize="16dp"
+                android:layout_alignParentRight="true"
+                android:text="AM"
+                android:layout_below="@id/smb_clock_text_time"
+                android:id="@+id/smb_clock_text_am"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"/>
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/dimgray"
+                android:layout_gravity="center_horizontal"
+                android:layout_alignParentRight="true"
+                />
 
-    <TextView
-        android:id="@+id/Activity_Parent_Mainpage_TextView_ClassNoteLeader1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:text="8:35"
-        android:textColor="@color/black"
-        android:textSize="18dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="工作日"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="浅睡唤醒"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="10dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="距离现在还有17小时23分钟"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="10dp"/>
+            </LinearLayout>
 
-    <TextView
-        android:id="@+id/Activity_Parent_Mainpage_TextView_ClassNoteDetails1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/Activity_Parent_Mainpage_TextView_ClassNoteLeader1"
-        android:layout_marginLeft="10dp"
-        android:textColor="@color/dimgray"
-        android:layout_marginTop="5dp"
-        android:text="闹钟会在设置时间的前半小时内的浅睡期唤醒"
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:shadowColor="@color/color_TitleBar" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+    <View  android:layout_height="1px"
+        android:layout_width="match_parent"
+        android:background="@color/dimgray"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+
         />
 
-    <ImageView
-        android:id="@+id/Activity_Parent_Mainpage_ImageView_PartingLine3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/Activity_Parent_Mainpage_TextView_ClassNoteDetails1"
-        android:layout_marginLeft="10dp"
 
-        android:src="@drawable/partingline" />
-
-
-    <Switch
-        android:id="@+id/clockListView_switch"
-        android:layout_marginLeft="300dp"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:track="@drawable/track"
-        android:textOff="   "
-        android:textOn="   "
-        android:layout_gravity="center"
-        android:checked="true"/>
-
-
-</RelativeLayout>
+</LinearLayout>

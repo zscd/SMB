@@ -1,21 +1,22 @@
 package com.example.zsk.smb.fragments;
 
+import android.content.Context;
 import android.content.Intent;
-import android.print.PrinterCapabilitiesInfo;
 import android.support.v4.app.Fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.ListView;
 
-import com.example.zsk.smb.MyFamilyActivity;
 import com.example.zsk.smb.OnlineDoctor;
 import com.example.zsk.smb.R;
-import com.example.zsk.smb.SetClockActivity;
 
 /**
  * Created by zsk on 2018/3/26.
@@ -42,10 +43,17 @@ public class ServiceFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.smb_service_fragment,null);
-        ImageView imageview_1 = (ImageView)view.findViewById(R.id.Activity_AllFunctions_ImageView_Function1);
-        ImageView imageview_3 = (ImageView)view.findViewById(R.id.Activity_AllFunctions_ImageView_Function3);
-        imageview_1.setOnClickListener(new MyClickListener());
-        imageview_3.setOnClickListener(new MyClickListener());
+        ListView lv = (ListView)view.findViewById(R.id.clockListView);
+        ImageView imageView_3 = (ImageView)view.findViewById(R.id.see_doctor);
+        imageView_3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),OnlineDoctor.class);
+                startActivity(intent);
+            }
+        });
+        ClockAdapter ca = new ClockAdapter();
+        lv.setAdapter(ca);
         return view;
     }
 
@@ -55,8 +63,7 @@ public class ServiceFragment extends Fragment{
 //            int i = 1/0;
             if (V.getId() == R.id.Activity_AllFunctions_ImageView_Function1) {
 //                int i = 1/0;
-                Intent intent = new Intent(getContext(), SetClockActivity.class);
-                startActivity(intent);
+
 
             } else if (V.getId() == R.id.Activity_AllFunctions_ImageView_Function2) {
 
@@ -79,7 +86,39 @@ public class ServiceFragment extends Fragment{
             }
         }
 
-
     }
+
+    class ClockAdapter extends BaseAdapter {
+        @Override
+        public int getCount() {
+            // TODO Auto-generated method stub
+            return 3;//数目
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            LayoutInflater inflater = getActivity().getLayoutInflater();
+            View view;
+
+            if (convertView==null) {
+                //因为getView()返回的对象，adapter会自动赋给ListView
+                view = inflater.inflate(R.layout.clock_item, null);
+            }else{
+                view=convertView;
+                Log.i("info","有缓存，不需要重新生成"+position);
+            }
+
+            return view;
+        }
+        @Override
+        public long getItemId(int position) {//取在列表中与指定索引对应的行id
+            return 0;
+        }
+        @Override
+        public Object getItem(int position) {//获取数据集中与指定索引对应的数据项
+            return null;
+        }
+    };
+
 
 }

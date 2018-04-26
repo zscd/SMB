@@ -45,7 +45,7 @@ public class BottomTabLayoutActivity extends AppCompatActivity {
                     TextView text = (TextView) view.findViewById(R.id.tab_content_text);
                     if(i == tab.getPosition()){ // 选中状态
                         icon.setImageResource(DataGenerator.mTabResPressed[i]);
-                        text.setTextColor(getResources().getColor(R.color.blue));
+                        text.setTextColor(getResources().getColor(R.color.color_TitleBar));
                     }else{// 未选中状态
                         icon.setImageResource(DataGenerator.mTabRes[i]);
                         text.setTextColor(getResources().getColor(android.R.color.darker_gray));
