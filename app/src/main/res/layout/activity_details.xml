@@ -9,7 +9,7 @@
         android:id="@+id/tab"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:background="#1c86ee"
+        android:background="@color/color_TitleBar"
         app:tabIndicatorColor="#fff"
         app:tabSelectedTextColor="#444"
         app:tabMode="fixed"

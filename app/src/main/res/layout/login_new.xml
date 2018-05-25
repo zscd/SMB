@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="20dp"
@@ -10,24 +9,9 @@
     android:paddingTop="20dp"
     tools:context="com.example.zsk.smb.LoginActivity"
     android:orientation="vertical"
-    android:background="@color/color_TitleBar">
+    android:background="@drawable/loginbackground">
 
-    <!--<TextView-->
-        <!--android:id="@+id/Login_TextView_Title"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignParentLeft="true"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_marginTop="100dp"-->
-        <!--android:background="@color/color_TitleBar"-->
-        <!--android:gravity="center_horizontal"-->
-        <!--android:paddingBottom="7dp"-->
-        <!--android:paddingTop="8dp"-->
-        <!--android:text="@string/Login_Title"-->
-        <!--android:textColor="#ffffff"-->
-        <!--android:textSize="40dp"-->
-        <!--android:textStyle="bold"-->
-        <!--android:typeface="sans"/>-->
+
         <ImageView
             android:layout_width="250dp"
             android:layout_height="wrap_content"
@@ -49,17 +33,35 @@
     <TextView
         android:layout_width="320dp"
         android:layout_height="0.5dip"
+        android:layout_gravity="center_horizontal"
         android:background="#999"/>
-    <EditText
-        android:id="@+id/login_password"
+    <LinearLayout
         android:layout_width="320dp"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="0dp"
-        android:paddingLeft="8dp"
-        android:background="@drawable/round_edittext2"
-        android:inputType="textPassword"
-        android:hint="@string/text_login_password"/>
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:paddingLeft="8dp"
+            android:background="@drawable/round_edittext2"
+            android:inputType="textPassword"
+            android:hint="@string/text_login_password"/>
+        <TextView
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#999"/>
+        <Button
+            android:id="@+id/get_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape2"
+            android:text="获取验证码"/>
+
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -89,11 +91,12 @@
     </RelativeLayout>
     <Button
         android:id="@+id/login_button"
-        android:layout_width="300dp"
+        android:layout_width="320dp"
         android:layout_height="60dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/shape"
         android:text="@string/text_login_button"
+        android:alpha="0.6"
         android:layout_marginTop="40dp"
         android:textSize="20dp" />
 

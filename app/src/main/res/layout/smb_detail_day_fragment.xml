@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="#FFFFF0"
+    android:background="#FFF"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ScrollView
@@ -16,52 +16,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <!--<RelativeLayout-->
-                <!--android:id="@+id/sleep_score_png"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:layout_marginTop="25dp">-->
-
-                <!--<ImageView-->
-                    <!--android:layout_width="140dp"-->
-                    <!--android:layout_height="140dp"-->
-                    <!--android:layout_alignParentTop="true"-->
-                    <!--android:layout_centerHorizontal="true"-->
-                    <!--android:src="@drawable/circle1" />-->
-
-                <!--<TextView-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_alignParentTop="true"-->
-                    <!--android:layout_centerHorizontal="true"-->
-                    <!--android:layout_marginTop="54dp"-->
-                    <!--android:textColor="@color/white"-->
-                    <!--android:text="72"-->
-                    <!--android:textSize="35dp" />-->
-
-
-            <!--</RelativeLayout>-->
-
-            <!--<com.shinelw.library.ColorArcProgressBar-->
-                <!--android:layout_width="150dp"-->
-                <!--android:layout_height="150dp"-->
-                <!--android:layout_marginTop="30dp"-->
-                <!--android:layout_centerHorizontal="true"-->
-                <!--android:id="@+id/sleep_score_png"-->
-                <!--app:is_need_content="true"-->
-                <!--app:front_color1="#69cbd2"-->
-                <!--app:front_color2="#7eb6e2"-->
-                <!--app:front_color3="#989df7"-->
-                <!--app:max_value="100"-->
-                <!--app:back_width="2dp"-->
-                <!--app:front_width="10dp"-->
-                <!--app:total_engle="270"-->
-                <!--app:is_need_unit="true"-->
-                <!--app:string_unit="分"-->
-                <!--app:is_need_title="true"-->
-                <!--app:string_title="最近一次睡眠"-->
-                <!--app:back_color="@android:color/darker_gray"-->
-                <!--/>-->
             <com.example.zsk.smb.ColorArcProgressBar
                 android:layout_width="150dp"
                 android:layout_height="150dp"
@@ -81,23 +35,7 @@
                 app:is_need_title="true"
                 app:string_title="最近一次睡眠"
                 app:back_color="@android:color/darker_gray" />
-            <!--<TextView-->
-                <!--android:id="@+id/sleep_png"-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="@string/last_score"-->
-                <!--android:textSize="20dp"-->
-                <!--android:layout_below="@+id/sleep_score_png"-->
-                <!--android:layout_centerHorizontal="true" />-->
 
-            <!--<ImageView-->
-                <!--android:id="@+id/smb_homeactivity_divider1"-->
-                <!--android:layout_below="@+id/sleep_png"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:adjustViewBounds="true"-->
-                <!--android:scaleType="fitXY"-->
-                <!--android:src="@drawable/ic_shelf_category_divider"/>-->
             <RelativeLayout
                 android:id="@+id/smb_homeactivity_divider1"
                 android:layout_below="@+id/sleep_score_png"
@@ -150,119 +88,144 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/test_bs"
                     android:layout_marginTop="30dp"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dip"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#999"
+                        android:layout_marginTop="20dp"/>
+                    <LinearLayout
+                        android:id="@+id/linearlayout_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:weightSum="1.0">
+
+                        <TextView
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="#999" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:text="入睡时间"
+                            android:gravity="center"
+                            android:layout_weight="0.25"/>
+                        <TextView
+                            android:layout_width="0.5dip"
+                            android:layout_height="match_parent"
+                            android:background="#999"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:text="醒来时间"
+                            android:gravity="center"
+                            android:layout_weight="0.25"/>
+                        <TextView
+                            android:layout_width="0.5dip"
+                            android:layout_height="match_parent"
+                            android:background="#999"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:text="深睡时长"
+                            android:gravity="center"
+                            android:layout_weight="0.25"/>
+                        <TextView
+                            android:layout_width="0.5dip"
+                            android:layout_height="match_parent"
+                            android:background="#999"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:text="浅睡时长"
+                            android:gravity="center"
+                            android:layout_weight="0.25"/>
+                        <TextView
+                            android:layout_width="0.5dip"
+                            android:layout_height="match_parent"
+                            android:background="#999"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/linearlayout_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="#999" />
+                        <TextView
+                            android:id="@+id/time_start_sleep"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:text="22:00"
+                            android:textColor="#6495ED"
+                            android:gravity="center"
+                            android:layout_weight="0.25" />
+                        <TextView
+                            android:layout_width="0.5dip"
+                            android:layout_height="match_parent"
+                            android:background="#999"/>
+                        <TextView
+                            android:id="@+id/time_end_sleep"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:text="07:00"
+                            android:textColor="#6495ED"
+                            android:gravity="center"
+                            android:layout_weight="0.25" />
+                        <TextView
+                            android:layout_width="0.5dip"
+                            android:layout_height="match_parent"
+                            android:background="#999"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:text="5H36M"
+                            android:textColor="#6495ED"
+                            android:gravity="center"
+                            android:layout_weight="0.25"/>
+                        <TextView
+                            android:layout_width="0.5dip"
+                            android:layout_height="match_parent"
+                            android:background="#999"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:text="2H24M"
+                            android:textColor="#6495ED"
+                            android:gravity="center"
+                            android:layout_weight="0.25"/>
+                        <TextView
+                            android:layout_width="0.5dip"
+                            android:layout_height="match_parent"
+                            android:background="#999"/>
+
+                    </LinearLayout>
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:gravity="center"
-                        android:layout_weight="1.0"
-                        android:textSize="20dp"
-                        android:text="21:30"/>
+                        android:layout_height="0.5dip"
+                        android:background="#999"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"/>
 
-                    <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:layout_weight="1.0"
-                        android:textSize="20dp"
-                        android:text="07:30" />
 
                 </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/linearlayout_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/linearlayout_1"
-                    android:layout_marginTop="10dp"
-                    android:orientation="horizontal"
-                    android:weightSum="2">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:gravity="center"
-                        android:layout_weight="1.0"
-                        android:textSize="20dp"
-                        android:text="入睡时间" />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:layout_weight="1.0"
-                        android:textSize="20dp"
-                        android:text="醒来时间" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/linearlayout_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_below="@+id/linearlayout_2"
-                    android:layout_marginTop="20dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:weightSum="2">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:text="3时0分"
-                        android:textSize="20dp"
-                        android:gravity="center"
-                        android:layout_weight="1.0" />
-
-                    <TextView
-                        android:id="@+id/textView3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:layout_weight="1.0"
-                        android:textSize="20dp"
-                        android:text="4时30分" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/linearlayout_4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_below="@+id/linearlayout_3"
-                    android:layout_marginTop="10dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:gravity="center"
-                        android:layout_weight="1.0"
-                        android:textSize="20dp"
-                        android:text="深睡时长"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:gravity="center"
-                        android:layout_weight="1.0"
-                        android:textSize="20dp"
-                        android:text="浅睡时长"/>
-
-                </LinearLayout>
-
             </RelativeLayout>
-            <!--<ImageView-->
-                <!--android:layout_below="@id/smb_homeactivity_conditions"-->
-                <!--android:id="@+id/smb_homeactivity_divider2"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:adjustViewBounds="true"-->
-                <!--android:scaleType="fitXY"-->
-                <!--android:src="@drawable/ic_shelf_category_divider" />-->
             <RelativeLayout
                 android:id="@+id/smb_homeactivity_divider2"
                 android:layout_below="@id/smb_homeactivity_conditions"
@@ -333,14 +296,7 @@
                 </LinearLayout>
 
             </RelativeLayout>
-            <!--<ImageView-->
-                <!--android:layout_below="@id/smb_homeactivity_heartrate"-->
-                <!--android:id="@+id/smb_homeactivity_divider3"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:adjustViewBounds="true"-->
-                <!--android:scaleType="fitXY"-->
-                <!--android:src="@drawable/ic_shelf_category_divider" />-->
+
             <RelativeLayout
                 android:id="@+id/smb_homeactivity_divider3"
                 android:layout_below="@id/smb_homeactivity_heartrate"
@@ -411,14 +367,7 @@
                 </LinearLayout>
 
             </RelativeLayout>
-            <!--<ImageView-->
-                <!--android:layout_below="@id/smb_homeactivity_breath"-->
-                <!--android:id="@+id/smb_homeactivity_divider4"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:adjustViewBounds="true"-->
-                <!--android:scaleType="fitXY"-->
-                <!--android:src="@drawable/ic_shelf_category_divider" />-->
+
 
             <RelativeLayout
                 android:id="@+id/smb_homeactivity_divider4"
@@ -456,51 +405,73 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/smb_homeactivity_danger"
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:layout_marginTop="20dp"
                 android:minHeight="60dp">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:weightSum="2.0">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_weight="1.0"
-                        android:gravity="center"
-                        android:textSize="20dp"
-                        android:text="2次"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1.0"
-                        android:gravity="center"
-                        android:textSize="20dp"
-                        android:text="1次"/>
-                </LinearLayout>
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:weightSum="2.0">-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="50dp"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center"-->
+                        <!--android:textSize="20dp"-->
+                        <!--android:text="2次"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center"-->
+                        <!--android:textSize="20dp"-->
+                        <!--android:text="1次"/>-->
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:weightSum="2.0">-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="50dp"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center"-->
+                        <!--android:textSize="20dp"-->
+                        <!--android:text="呼吸暂停"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="1.0"-->
+                        <!--android:gravity="center"-->
+                        <!--android:textSize="20dp"-->
+                        <!--android:text="心率异常"/>-->
+
+                <!--</LinearLayout>-->
+                <ImageView
+                    android:src="@drawable/danger"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:weightSum="2.0">
-
+                    android:layout_height="50dp"
+                    android:orientation="vertical"
+                    android:weightSum="2">
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:layout_weight="1.0"
-                        android:gravity="center"
-                        android:textSize="20dp"
-                        android:text="呼吸暂停"/>
+                        android:layout_height="wrap_content"
+                        android:text="呼吸暂停：1次"
+                        android:layout_weight="1"/>
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1.0"
-                        android:gravity="center"
-                        android:textSize="20dp"
-                        android:text="心率异常"/>
+                        android:layout_height="wrap_content"
+                        android:text="心率异常：1次"
+                        android:layout_weight="1"/>
 
                 </LinearLayout>
-
             </LinearLayout>
 
             <RelativeLayout
@@ -544,14 +515,16 @@
                 android:minHeight="60dp">
 
                 <ImageView
-                    android:src="@drawable/doctor2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:src="@drawable/service_icon_selected"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:textSize="20dp"
+                    android:textSize="16dp"
+                    android:gravity="center_vertical"
                     android:text="@string/suggest"/>
             </LinearLayout>
         </RelativeLayout>

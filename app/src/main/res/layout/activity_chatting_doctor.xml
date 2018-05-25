@@ -22,7 +22,7 @@
             android:layout_marginLeft="5dp"
             android:textSize="20dp"
             android:textColor="#FFF"
-            android:text="XXX医生"/>
+            android:text=" 李医生"/>
     </LinearLayout>
 
     <android.support.v7.widget.RecyclerView

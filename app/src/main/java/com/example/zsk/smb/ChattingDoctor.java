@@ -61,7 +61,7 @@ public class ChattingDoctor extends AppCompatActivity {
     }
 
     private void initMsgs() {
-        Msg msg1 = new Msg("你好！这里是XXX医生。很乐意为您服务。", Msg.TYPE_RECEIVED);
+        Msg msg1 = new Msg("你好！这里是李医生。很乐意为您服务。", Msg.TYPE_RECEIVED);
         msgList.add(msg1);
         Msg msg2 = new Msg("你好！", Msg.TYPE_SENT);
         msgList.add(msg2);

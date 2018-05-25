@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">智慧睡眠宝</string>
     <string name="text_login_id">请输入账号</string>
-    <string name="text_login_password">请输入密码</string>
+    <string name="text_login_password">请输入验证码</string>
     <string name="remember_password">记住密码</string>
     <string name="auto_login">自动登录</string>
     <string name="text_login_button">登录</string>
@@ -17,4 +17,6 @@
     <string name="history_record">历史记录</string>
     <string name="history_day">3月21日</string>
     <string name="suggest">本次用户睡眠情况为良，出现呼吸暂停与心率异常，有潜在睡眠疾病可能。</string>
+    <string name="binding_id">请输入设备ID</string>
+    <string name="binding_verification_code">请输入设备验证码</string>
 </resources>

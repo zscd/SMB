@@ -1,6 +1,7 @@
 package com.example.zsk.smb;
 
 import android.animation.ValueAnimator;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.Message;
 import android.view.Window;
@@ -37,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
     private CheckBox remember_password_login;
     private CheckBox auto_login;
     private Button button_login;
+    private Button get_code;
     private Button button_register;
     private SharedPreferences pref;
     private SharedPreferences.Editor editor;
@@ -70,6 +72,7 @@ public class LoginActivity extends AppCompatActivity {
         auto_login = (CheckBox)findViewById(R.id.login_auto_login);
         button_login=(Button)findViewById(R.id.login_button);
         button_register = (Button)findViewById(R.id.activity_login_button_zhuce);
+        get_code = (Button)findViewById(R.id.get_code);
         boolean isRemember1 = pref.getBoolean("remember_password",false);
         boolean isRemember2 = pref.getBoolean("auto_login",false);
         String exitFlag = getIntent().getStringExtra("flag");
@@ -122,9 +125,16 @@ public class LoginActivity extends AppCompatActivity {
                                     editor.clear();
                                 }
                                 editor.apply();
-                                Intent intent = new Intent(LoginActivity.this,BottomTabLayoutActivity.class);
-                                startActivity(intent);
-                                finish();
+                                if(isFirstRun()){
+                                    Intent intent = new Intent(LoginActivity.this,BindingActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                }
+                                else{
+                                    Intent intent = new Intent(LoginActivity.this,BottomTabLayoutActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                }
 
                             }else {
                                 Message message = new Message();
@@ -154,7 +164,24 @@ public class LoginActivity extends AppCompatActivity {
 
            }
         });
+        get_code.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                new CountDownTimer(30000, 1000) {
+                    @Override
+                    public void onTick(long millisUntilFinished) {
+                        get_code.setEnabled(false);
+                        get_code.setText(String.format("%ds后重新发送",millisUntilFinished/1000));
+                    }
 
+                    @Override
+                    public void onFinish() {
+                        get_code.setEnabled(true);
+                        get_code.setText("获取验证码");
+                    }
+                }.start();
+            }
+        });
     }
 
     private void dimBackground(final float from, final float to) {
@@ -172,5 +199,20 @@ public class LoginActivity extends AppCompatActivity {
 
         valueAnimator.start();
     }
-
+    private boolean isFirstRun(){
+        SharedPreferences sharedPreferences = this.getSharedPreferences(
+                "share", MODE_PRIVATE);
+        //实例化SharedPreferences.Editor对象（第二步）
+        boolean isFirstRun = sharedPreferences.getBoolean("isFirstRun", true);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        if (!isFirstRun) {
+            return false;
+        } else {
+            //保存数据 （第三步）
+            editor.putBoolean("isFirstRun", false);
+            //提交当前数据 （第四步）
+            editor.commit();
+            return true;
+        }
+    }
 }

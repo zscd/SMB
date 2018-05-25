@@ -25,7 +25,8 @@
         <activity android:name=".MyFamilyActivity" />
         <activity android:name=".ChangeDevice" />
         <activity android:name=".OnlineDoctor" />
-        <activity android:name=".ChattingDoctor"></activity>
+        <activity android:name=".ChattingDoctor" />
+        <activity android:name=".BindingActivity"></activity>
     </application>
 
 </manifest>

@@ -15,7 +15,7 @@ public class ByStagesView extends LinearLayout {
     private TextView tv_start;
     private TextView tv_end;
     private Context c;
-    protected static int[] colors = {0xfffff5ee, 0xffffe4c4, 0xffdcdcdc}; //清醒、浅睡、深睡
+    protected static int[] colors = {0xfffff5ee, 0xff32dd9b, 0xff89abdb}; //清醒、浅睡、深睡
 
     public ByStagesView(Context context, AttributeSet attrs){
         super(context, attrs);

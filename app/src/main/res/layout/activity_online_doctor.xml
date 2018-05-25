@@ -54,7 +54,7 @@
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/doctor_imageview_1"
             android:gravity="center"
-            android:text="XXX" />
+            android:text="李医生" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -92,7 +92,7 @@
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/doctor_imageview_2"
             android:gravity="center"
-            android:text="XXX" />
+            android:text="王医生" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -129,7 +129,7 @@
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/doctor_imageview_3"
             android:gravity="center"
-            android:text="XXX" />
+            android:text="谢医生" />
 
         <TextView
             android:layout_width="wrap_content"

@@ -14,7 +14,7 @@ import com.example.zsk.smb.custom.BarChartManager;
 
 public class DetailsActivity extends AppCompatActivity{
 
-
+    private ColorArcProgressBar bar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +22,8 @@ public class DetailsActivity extends AppCompatActivity{
 
         LineChart lineChart_1 = (LineChart) findViewById(R.id.smb_homeactivity_LineChart_heartrate);
         LineChart lineChart_2 = (LineChart) findViewById(R.id.smb_homeactivity_LineChart_breath);
+        bar = (ColorArcProgressBar) findViewById(R.id.sleep_score_png);
+        bar.setCurrentValues(72);
 
         LineChartManager lineChartManager1 = new LineChartManager(lineChart_1);
         LineChartManager lineChartManager2 = new LineChartManager(lineChart_2);
@@ -58,19 +60,29 @@ public class DetailsActivity extends AppCompatActivity{
 
         //线的名字集合
         List<String> names = new ArrayList<>();
-        names.add("折线一");
-        names.add("折线二");
-        names.add("折线三");
+        names.add("");
+        names.add("心率");
+        names.add("呼吸");
         names.add("折线四");
 
-        lineChartManager1.showLineChart(xValues, yValues.get(0), names.get(1), colours.get(3));
-        lineChartManager1.setDescription("心率");
-        lineChartManager1.setYAxis(100, 0, 11);
+//        lineChartManager1.showLineChart(xValues, yValues.get(0), names.get(1), colours.get(3));
+//        lineChartManager1.setDescription("心率");
+//        lineChartManager1.setYAxis(100, 0, 11);
+//        // lineChartManager1.setHightLimitLine(90,"高心率报警",Color.RED);
+//        //lineChartManager1.setLowLimitLine(50,"低心率报警");
+//        lineChartManager2.showLineChart(xValues, yValues.get(1), names.get(2), colours.get(3));
+//        lineChartManager2.setYAxis(100, 0, 11);
+//        lineChartManager2.setDescription("呼吸");
+//        //lineChartManager2.setHightLimitLine(50,"高呼吸次数",Color.RED);
+//        //lineChartManager2.setLowLimitLine(20,"低呼吸次数");
+        lineChartManager1.showLineChart(xValues,yValues.get(0),names.get(1),colours.get(3));
+        lineChartManager1.setDescription(" ");
+        lineChartManager1.setYAxis(150,0,0);
         // lineChartManager1.setHightLimitLine(90,"高心率报警",Color.RED);
         //lineChartManager1.setLowLimitLine(50,"低心率报警");
-        lineChartManager2.showLineChart(xValues, yValues.get(1), names.get(2), colours.get(3));
-        lineChartManager2.setYAxis(100, 0, 11);
-        lineChartManager2.setDescription("呼吸");
+        lineChartManager2.showLineChart(xValues,yValues.get(1),names.get(2),colours.get(3));
+        lineChartManager2.setYAxis(100,0,0);
+        lineChartManager2.setDescription(" ");
         //lineChartManager2.setHightLimitLine(50,"高呼吸次数",Color.RED);
         //lineChartManager2.setLowLimitLine(20,"低呼吸次数");
 

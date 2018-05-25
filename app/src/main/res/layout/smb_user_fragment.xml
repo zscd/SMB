@@ -4,21 +4,24 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFF0">
+    android:background="#FFF">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/color_TitleBar">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/user_avatar"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/user"
-            android:layout_alignParentTop="true"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/timg"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp" />
+
+            android:layout_marginTop="40dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FFF"/>
         <TextView
             android:id="@+id/user_name"
             android:layout_below="@+id/user_avatar"
@@ -26,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="23dp"
-            android:textColor="#000"
+            android:textColor="#FFF"
             android:gravity="center"
             android:layout_marginTop="10dp"/>
 
@@ -48,17 +51,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#F4F4F4"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="1dip"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="50dp"
             android:background="#999"/>
         <RelativeLayout
             android:id="@+id/user_function_1"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="50dp"
             android:background="#FFF"
             android:weightSum="1">
 
@@ -105,7 +109,7 @@
         <RelativeLayout
             android:id="@+id/user_function_2"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="50dp"
             android:layout_marginTop="0dp"
             android:orientation="horizontal"
             android:background="#FFF"
@@ -148,7 +152,7 @@
         <RelativeLayout
             android:id="@+id/user_function_3"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="50dp"
             android:layout_marginTop="0dp"
             android:orientation="horizontal"
             android:background="#FFF"
@@ -192,12 +196,12 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="1dip"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="20dp"
             android:background="#999"/>
         <RelativeLayout
             android:id="@+id/user_function_4"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="50dp"
             android:background="#FFF"
             android:weightSum="1"
             android:layout_marginTop="0dp">
